@@ -156,17 +156,45 @@ def extended_gcd(a,b):
         (oldt, t) = (t, oldt - quotient*t)
         (olds, s) = (s, olds - quotient*s)
     return oldt
+
 def ModExp(message, e, n):
     #Calculate r
-    binret=[]
-    
     i = 0
     while (2 ** i) < n:
         i += 1
 
     r = 2 ** i
 
-    #Calculate n_merket and r_inv
+        
+    n_merket = -extended_gcd(r,n)
+    e_bit = bin(e)[2:]
+    #Calculate M_strek
+    M_strek = (message * r) % n
+    
+
+    #Calculate x_strek
+    x_strek = r % n
+
+#        print e, "=", e_bit,"Melding:",message
+    for i in e_bit:
+        x_strek = MonPro(x_strek,x_strek,n,n_merket,r)
+#            print "i:",i
+        if i == '1':
+#            print "match"
+            x_strek = MonPro(M_strek,x_strek,n,n_merket,r)
+
+    x = MonPro(x_strek,1,n,n_merket,r)
+
+    return x
+
+
+
+def torge_crypt(pk, M):
+    
+    binret=[]    
+    #Unpack the key into it's components
+    e, n = pk
+
     if n % 2 == 0:
         binret=BinSplit(n)
         j = binret[0]
@@ -181,35 +209,8 @@ def ModExp(message, e, n):
         x = x1 + q*y
         return x
         
-    else:
-        n_merket = -extended_gcd(r,n)
-        e_bit = bin(e)[2:]
-        #Calculate M_strek
-        M_strek = (message * r) % n
-        
-
-        #Calculate x_strek
-        x_strek = r % n
-
-#        print e, "=", e_bit,"Melding:",message
-        for i in e_bit:
-            x_strek = MonPro(x_strek,x_strek,n,n_merket,r)
-#            print "i:",i
-            if i == '1':
-#            print "match"
-                x_strek = MonPro(M_strek,x_strek,n,n_merket,r)
-
-        x = MonPro(x_strek,1,n,n_merket,r)
-
-    return x
-
-
-
-def torge_crypt(pk, M):
-    #Unpack the key into it's components
-    e, n = pk
-    
-    return ModExp(M, e, n)
+    else:    
+        return ModExp(M, e, n)
 
 
 if __name__ == '__main__':

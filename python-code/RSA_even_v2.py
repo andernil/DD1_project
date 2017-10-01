@@ -147,14 +147,12 @@ def BinSplit(n):
     return binsend
 
 def extended_gcd(a,b):
-    s = 0; olds = 1
     t = 1; oldt = 0
     r = b; oldr = a
     while r != 0:
         quotient = oldr / r
         (oldr, r) = (r, oldr - quotient*r)
         (oldt, t) = (t, oldt - quotient*t)
-        (olds, s) = (s, olds - quotient*s)
     return oldt
 
 def ModExp(message, e, n):

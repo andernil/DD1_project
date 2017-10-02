@@ -226,7 +226,7 @@ if __name__ == '__main__':
     decrypted_msg = torge_crypt(public, encrypted_msg)
     print "Dekryptert", decrypted_msg
     endtime = datetime.now()
-
+	
     print "Time:", endtime-starttime
 
     print ""

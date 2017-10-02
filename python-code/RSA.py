@@ -1,8 +1,7 @@
 # -*- coding: utf-8 -*-
 """
 Created on Mon Sep 25 19:36:36 2017
-
-@author: anders
+@author: anders & torgeir
 """
 
 '''
@@ -12,6 +11,7 @@ Part A - RSA Encryption
 '''
 
 import random
+from datetime import datetime
 
 '''
 Euclid's algorithm for determining the greatest common divisor
@@ -90,15 +90,13 @@ def generate_keypair(p, q):
     return ((e, n), (d, n))
 
 def MonPro(a_strek, b_strek, n, n_merket, r):
-    #print(a_strek, b_strek)
+
     t = a_strek * b_strek
     m = (t * n_merket) % r
     u = (t+(m*n))/r
-#    print(a_strek, b_strek, "u:", u)
+
     if u >= n:
-#        print "more",u-n
         return u-n
-#    print u
     return u
 
 def BinExp(message, e, n):
@@ -156,36 +154,20 @@ def extended_gcd(a,b):
     return oldt
 
 def ModExp(message, e, n):
-    #Calculate r
-    i = 0
-    while (2 ** i) < n:
-        i += 1
 
-    r = 2 ** i
-
-        
+    r = 2 ** len(bin(n)[2:]) # r = (r mod n) + n
     n_merket = -extended_gcd(r,n)
-    e_bit = bin(e)[2:]
-    #Calculate M_strek
-    M_strek = (message * r) % n
     
-
-    #Calculate x_strek
+    #NOTE! "r mod n" and "r*r mod n" is given in the exercise
+    M_strek = MonPro(message,(r*r) % n,n,n_merket,r)
     x_strek = r % n
 
-#        print e, "=", e_bit,"Melding:",message
-    for i in e_bit:
-        x_strek = MonPro(x_strek,x_strek,n,n_merket,r)
-#            print "i:",i
+    for i in bin(e)[2:][::-1]:
         if i == '1':
-#            print "match"
             x_strek = MonPro(M_strek,x_strek,n,n_merket,r)
+        M_strek = MonPro(M_strek,M_strek,n,n_merket,r)
 
-    x = MonPro(x_strek,1,n,n_merket,r)
-
-    return x
-
-
+    return MonPro(x_strek,1,n,n_merket,r)
 
 def torge_crypt(pk, M):
     
@@ -211,13 +193,14 @@ def torge_crypt(pk, M):
         return ModExp(M, e, n)
 
 
+
 if __name__ == '__main__':
     '''
     Detect if the script is being run directly by the user
     '''
     print "RSA Encrypter/ Decrypter"
-    p = int(raw_input("Enter a prime number (17, 19, 23, etc): "))
-    q = int(raw_input("Enter another prime number (Not one you entered above): "))
+    p = int((raw_input("Enter a prime number (17, 19, 23, etc): ")).replace(",",""))
+    q = int((raw_input("Enter another prime number (Not one you entered above): ")).replace(",",""))
 #    p = 43
 #    q = 17
 #    message = 19
@@ -231,18 +214,20 @@ if __name__ == '__main__':
 
     message = int(message_str)
 
-
-#    private = (10,13)
 #    private = (5,119)
 #    public = (77,119)
 
     print "Message is:", message
     print "encrypting message with private key", private, ". . ."
+    starttime = datetime.now()
     encrypted_msg = torge_crypt(private, message)
     print "Kryptert:",encrypted_msg
     print "Decrypting message with public key ", public ," . . ."
     decrypted_msg = torge_crypt(public, encrypted_msg)
     print "Dekryptert", decrypted_msg
+    endtime = datetime.now()
+
+    print "Time:", endtime-starttime
 
     print ""
     print "Fasit"
@@ -257,10 +242,3 @@ if __name__ == '__main__':
         print "Woohooo, all pass!!"
     else:
         print "Buuhuu, noe gikk galt"
-
-
-
-
-
-
-

@@ -181,9 +181,9 @@ def torge_crypt(pk, M):
         binret=BinSplit(n)
         j = binret[0]
         q = binret[1]
-        x1 = ModExp(message, e, q)
+        x1 = ModExp(M, e, q)
         x2val = 2**j
-        x2_1 = message % x2val
+        x2_1 = M % x2val
         x2_2 = e % 2**(j-1)
         x2 = BinExp(x2_1, x2_2, x2val)
         q_inv = ModInverse(q,j)

@@ -145,18 +145,20 @@ def BinSplit(n):
     return binsend
 
 def extended_gcd(a,b):  
+    out = []
     t = 1; oldt = 0
     r = b; oldr = a
     while r != 0:
         quotient = oldr / r
         (oldr, r) = (r, oldr - quotient*r)
         (oldt, t) = (t, oldt - quotient*t)
-    return oldt
+    out.append(oldr); out.append(oldt); out.append(r); out.append(t)
+    return out
 
 def ModExp(message, e, n):
 
     r = 2 ** len(bin(n)[2:]) # r = (r mod n) + n
-    n_merket = -extended_gcd(r,n)
+    n_merket = -extended_gcd(r,n)[1]
     
     #NOTE! "r mod n" and "r*r mod n" is given in the exercise
     M_strek = MonPro(message,(r*r) % n,n,n_merket,r)
@@ -219,18 +221,13 @@ if __name__ == '__main__':
 
     print "Message is:", message
     print "encrypting message with private key", private, ". . ."
-<<<<<<< HEAD:python-code/RSA_even_v2.py
-    startTime = datetime.now()
-=======
     starttime = datetime.now()
->>>>>>> 4d8c8e6f6276380a114c985cdbe320d9a1f91c11:python-code/RSA.py
     encrypted_msg = torge_crypt(private, message)
     print "Kryptert:",encrypted_msg
     print "Decrypting message with public key ", public ," . . ."
     decrypted_msg = torge_crypt(public, encrypted_msg)
     print "Dekryptert", decrypted_msg
-<<<<<<< HEAD:python-code/RSA_even_v2.py
-    print "Tid:", datetime.now() - startTime
+    print "Tid:", datetime.now() - starttime
     print ""
     print "Fasit"
     print ""
@@ -251,7 +248,6 @@ if __name__ == '__main__':
 
 
 
-=======
     endtime = datetime.now()
 	
     print "Time:", endtime-starttime
@@ -269,4 +265,3 @@ if __name__ == '__main__':
         print "Woohooo, all pass!!"
     else:
         print "Buuhuu, noe gikk galt"
->>>>>>> 4d8c8e6f6276380a114c985cdbe320d9a1f91c11:python-code/RSA.py

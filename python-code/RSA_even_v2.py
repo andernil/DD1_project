@@ -12,6 +12,7 @@ Part A - RSA Encryption
 '''
 
 import random
+from datetime import datetime
 
 '''
 Euclid's algorithm for determining the greatest common divisor
@@ -146,7 +147,7 @@ def BinSplit(n):
     binsend.append(int(binodd,2))
     return binsend
 
-def extended_gcd(a,b):
+def extended_gcd(a,b):  
     t = 1; oldt = 0
     r = b; oldr = a
     while r != 0:
@@ -221,7 +222,7 @@ if __name__ == '__main__':
 #    p = 43
 #    q = 17
 #    message = 19
-
+    
     print "Generating your public/private keypairs now . . ."
     public, private = generate_keypair(p, q)
     print "Your public key is ", public ," and your private key is ", private
@@ -238,25 +239,26 @@ if __name__ == '__main__':
 
     print "Message is:", message
     print "encrypting message with private key", private, ". . ."
+    startTime = datetime.now()
     encrypted_msg = torge_crypt(private, message)
     print "Kryptert:",encrypted_msg
     print "Decrypting message with public key ", public ," . . ."
     decrypted_msg = torge_crypt(public, encrypted_msg)
     print "Dekryptert", decrypted_msg
-
+    print "Tid:", datetime.now() - startTime
     print ""
     print "Fasit"
     print ""
-    Fasit_encrypted_msg = (message ** private[0]) % private[1]
-    print Fasit_encrypted_msg
-    Fasit_decrypted_msg = (Fasit_encrypted_msg ** public[0]) % public[1]
-    print Fasit_decrypted_msg
-
-    print ""
-    if encrypted_msg == Fasit_encrypted_msg and decrypted_msg == Fasit_decrypted_msg:
-        print "Woohooo, all pass!!"
-    else:
-        print "Buuhuu, noe gikk galt"
+#    Fasit_encrypted_msg = (message ** private[0]) % private[1]
+#    print Fasit_encrypted_msg
+#    Fasit_decrypted_msg = (Fasit_encrypted_msg ** public[0]) % public[1]
+#    print Fasit_decrypted_msg
+#
+#    print ""
+#    if encrypted_msg == Fasit_encrypted_msg and decrypted_msg == Fasit_decrypted_msg:
+#        print "Woohooo, all pass!!"
+#    else:
+#        print "Buuhuu, noe gikk galt"
 
 
 

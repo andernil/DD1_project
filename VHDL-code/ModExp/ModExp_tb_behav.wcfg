@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="ModExp_tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="ModExp_tb" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="6434750000fs"></ZoomStartTime>
+      <ZoomEndTime time="6537050001fs"></ZoomEndTime>
+      <Cursor1Time time="6520000000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="127"></NameColumnWidth>
+      <ValueColumnWidth column_width="290"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="22" />
+   <wvobject fp_name="/ModExp_tb/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ModExp_tb/reset_n" type="logic">
+      <obj_property name="ElementShortName">reset_n</obj_property>
+      <obj_property name="ObjectShortName">reset_n</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ModExp_tb/M_in" type="array">
+      <obj_property name="ElementShortName">M_in[127:0]</obj_property>
+      <obj_property name="ObjectShortName">M_in[127:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ModExp_tb/e_in" type="array">
+      <obj_property name="ElementShortName">e_in[127:0]</obj_property>
+      <obj_property name="ObjectShortName">e_in[127:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ModExp_tb/n_in" type="array">
+      <obj_property name="ElementShortName">n_in[127:0]</obj_property>
+      <obj_property name="ObjectShortName">n_in[127:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ModExp_tb/r_n" type="array">
+      <obj_property name="ElementShortName">r_n[127:0]</obj_property>
+      <obj_property name="ObjectShortName">r_n[127:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ModExp_tb/rr_n" type="array">
+      <obj_property name="ElementShortName">rr_n[127:0]</obj_property>
+      <obj_property name="ObjectShortName">rr_n[127:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ModExp_tb/dut/ME_done_int" type="array">
+      <obj_property name="ElementShortName">ME_done_int[1:0]</obj_property>
+      <obj_property name="ObjectShortName">ME_done_int[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ModExp_tb/ME_done" type="logic">
+      <obj_property name="ElementShortName">ME_done</obj_property>
+      <obj_property name="ObjectShortName">ME_done</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ModExp_tb/dut/MP_done_1" type="logic">
+      <obj_property name="ElementShortName">MP_done_1</obj_property>
+      <obj_property name="ObjectShortName">MP_done_1</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ModExp_tb/M_out" type="array">
+      <obj_property name="ElementShortName">M_out[127:0]</obj_property>
+      <obj_property name="ObjectShortName">M_out[127:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ModExp_tb/dut/a_in_1" type="array">
+      <obj_property name="ElementShortName">a_in_1[127:0]</obj_property>
+      <obj_property name="ObjectShortName">a_in_1[127:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ModExp_tb/dut/b_in_1" type="array">
+      <obj_property name="ElementShortName">b_in_1[127:0]</obj_property>
+      <obj_property name="ObjectShortName">b_in_1[127:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ModExp_tb/dut/u_out_1" type="array">
+      <obj_property name="ElementShortName">u_out_1[127:0]</obj_property>
+      <obj_property name="ObjectShortName">u_out_1[127:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ModExp_tb/dut/a_in_2" type="array">
+      <obj_property name="ElementShortName">a_in_2[127:0]</obj_property>
+      <obj_property name="ObjectShortName">a_in_2[127:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ModExp_tb/dut/b_in_2" type="array">
+      <obj_property name="ElementShortName">b_in_2[127:0]</obj_property>
+      <obj_property name="ObjectShortName">b_in_2[127:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ModExp_tb/dut/u_out_2" type="array">
+      <obj_property name="ElementShortName">u_out_2[127:0]</obj_property>
+      <obj_property name="ObjectShortName">u_out_2[127:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ModExp_tb/dut/loop_count" type="array">
+      <obj_property name="ElementShortName">loop_count[6:0]</obj_property>
+      <obj_property name="ObjectShortName">loop_count[6:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ModExp_tb/dut/loop_test" type="array">
+      <obj_property name="ElementShortName">loop_test[127:0]</obj_property>
+      <obj_property name="ObjectShortName">loop_test[127:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ModExp_tb/dut/u_reg_1" type="array">
+      <obj_property name="ElementShortName">u_reg_1[127:0]</obj_property>
+      <obj_property name="ObjectShortName">u_reg_1[127:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ModExp_tb/dut/u_reg_2" type="array">
+      <obj_property name="ElementShortName">u_reg_2[127:0]</obj_property>
+      <obj_property name="ObjectShortName">u_reg_2[127:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ModExp_tb/dut/MP_done_first" type="logic">
+      <obj_property name="ElementShortName">MP_done_first</obj_property>
+      <obj_property name="ObjectShortName">MP_done_first</obj_property>
+   </wvobject>
+</wave_config>

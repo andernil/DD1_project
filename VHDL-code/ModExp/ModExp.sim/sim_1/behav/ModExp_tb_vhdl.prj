@@ -1,0 +1,7 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  "../../../ModExp.srcs/sources_1/imports/new/MonPro.vhd"
+vhdl xil_defaultlib  "../../../ModExp.srcs/sources_1/imports/new/ModExp.vhd"
+vhdl xil_defaultlib  "../../../ModExp.srcs/sim_1/imports/new/ModExp_tb.vhd"
+
+# Do not sort compile order
+nosort

@@ -1,7 +1,9 @@
 # compile vhdl design source files
+vhdl xil_defaultlib  "../../../Shell.srcs/sources_1/imports/new/MonPro.vhd"
+vhdl xil_defaultlib  "../../../Shell.srcs/sources_1/imports/new/ModExp.vhd"
+vhdl xil_defaultlib  "../../../Shell.srcs/sources_1/new/Shell.vhd"
 vhdl xil_defaultlib  "../../../Shell.srcs/sim_1/imports/RSA/RSAParameters.vhd"
 vhdl xil_defaultlib  "../../../Shell.srcs/sim_1/imports/RSA/CompDecl.vhd"
-vhdl xil_defaultlib  "../../../Shell.srcs/sources_1/new/Shell.vhd"
 vhdl xil_defaultlib  "../../../Shell.srcs/sim_1/imports/RSA/RSACoreTestBench.vhd"
 
 # Do not sort compile order

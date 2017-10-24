@@ -12,6 +12,10 @@ Compiling package std.textio
 Compiling package ieee.std_logic_1164
 Compiling package xil_defaultlib.rsaparameters
 Compiling package xil_defaultlib.compdecl
+Compiling package ieee.numeric_std
+Compiling architecture behavioral of entity xil_defaultlib.MonPro_loop [monpro_loop_default]
+Compiling architecture behavioral of entity xil_defaultlib.MonPro [monpro_default]
+Compiling architecture behavioral of entity xil_defaultlib.ModExp [modexp_default]
 Compiling architecture behavioral of entity xil_defaultlib.RSACore [rsacore_default]
 Compiling architecture struct of entity xil_defaultlib.rsacoretestbench
 Built simulation snapshot RSACoreTestBench_behav

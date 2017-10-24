@@ -1,0 +1,4 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Torgeir Leithe/Google Drive/stor-skole/TFE4141 Design av digitale system 1/RSA/MonPro/MonPro/MonPro.sim/sim_1/synth/timing/MonPro_tb_time_synth.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MonPro
+INFO: [VRFC 10-311] analyzing module MonPro_loop
+INFO: [VRFC 10-311] analyzing module glbl

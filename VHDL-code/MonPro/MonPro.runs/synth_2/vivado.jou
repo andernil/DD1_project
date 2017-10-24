@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2017.2.1 (64-bit)
+# SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
+# IP Build 1948039 on Wed Aug  9 18:19:28 MDT 2017
+# Start of session at: Sat Oct 21 20:28:49 2017
+# Process ID: 16256
+# Current directory: C:/Users/Torgeir Leithe/Google Drive/stor-skole/TFE4141 Design av digitale system 1/RSA/MonPro/MonPro/MonPro.runs/synth_2
+# Command line: vivado.exe -log MonPro.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source MonPro.tcl
+# Log file: C:/Users/Torgeir Leithe/Google Drive/stor-skole/TFE4141 Design av digitale system 1/RSA/MonPro/MonPro/MonPro.runs/synth_2/MonPro.vds
+# Journal file: C:/Users/Torgeir Leithe/Google Drive/stor-skole/TFE4141 Design av digitale system 1/RSA/MonPro/MonPro/MonPro.runs/synth_2\vivado.jou
+#-----------------------------------------------------------
+source MonPro.tcl -notrace

@@ -45,6 +45,6 @@ end RSACore;
 architecture Behavioral of RSACore is
 
 begin
-
+CoreFinished <= '0';
 
 end Behavioral;

@@ -8,12 +8,13 @@
 library ieee;
 use ieee.std_logic_1164.all;
 
+library std;
+use std.textio.all;
+
+
 library work;
 use work.RSAParameters.all;
 use work.CompDecl.all;
-
-library std;
-use std.textio.all;
 
 entity RSACoreTestBench is
 end RSACoreTestBench;

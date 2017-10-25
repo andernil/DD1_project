@@ -2,42 +2,12 @@
 # Vivado v2017.3 (64-bit)
 # SW Build 2018833 on Wed Oct  4 19:58:22 MDT 2017
 # IP Build 2016188 on Wed Oct  4 21:52:56 MDT 2017
-# Start of session at: Wed Oct 25 13:01:01 2017
-# Process ID: 8064
-# Current directory: C:/Users/Torgeir Leithe/Google Drive/stor-skole/TFE4141 Design av digitale system 1/RSA/Git/DD1_project/VHDL-code/Shell
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent2300 C:\Users\Torgeir Leithe\Google Drive\stor-skole\TFE4141 Design av digitale system 1\RSA\Git\DD1_project\VHDL-code\Shell\Shell.xpr
-# Log file: C:/Users/Torgeir Leithe/Google Drive/stor-skole/TFE4141 Design av digitale system 1/RSA/Git/DD1_project/VHDL-code/Shell/vivado.log
-# Journal file: C:/Users/Torgeir Leithe/Google Drive/stor-skole/TFE4141 Design av digitale system 1/RSA/Git/DD1_project/VHDL-code/Shell\vivado.jou
+# Start of session at: Wed Oct 25 22:38:24 2017
+# Process ID: 18076
+# Current directory: C:/git/DD1_project/VHDL-code/Shell
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent10516 C:\git\DD1_project\VHDL-code\Shell\Shell.xpr
+# Log file: C:/git/DD1_project/VHDL-code/Shell/vivado.log
+# Journal file: C:/git/DD1_project/VHDL-code/Shell\vivado.jou
 #-----------------------------------------------------------
 start_gui
-open_project {C:/Users/Torgeir Leithe/Google Drive/stor-skole/TFE4141 Design av digitale system 1/RSA/Git/DD1_project/VHDL-code/Shell/Shell.xpr}
-launch_runs synth_1 -jobs 2
-wait_on_run synth_1
-reset_run synth_1
-synth_design -rtl -name rtl_1
-refresh_design
-launch_simulation
-open_wave_config {C:/Users/Torgeir Leithe/Google Drive/stor-skole/TFE4141 Design av digitale system 1/RSA/Git/DD1_project/VHDL-code/Shell/RSACoreTestBench_behav.wcfg}
-source RSACoreTestBench.tcl
-restart
-run 163.83 us
-run 163.83 us
-relaunch_sim
-restart
-run 163.83 us
-restart
-run 163.83 us
-run 163.83 us
-restart
-run 163.83 us
-relaunch_sim
-relaunch_sim
-run 163.83 us
-relaunch_sim
-run 163.83 us
-relaunch_sim
-restart
-run 163.83 us
-launch_runs synth_1 -jobs 2
-wait_on_run synth_1
-open_run synth_1 -name synth_1
+open_project C:/git/DD1_project/VHDL-code/Shell/Shell.xpr

@@ -1,94 +1,74 @@
 #-----------------------------------------------------------
-# Vivado v2017.2.1 (64-bit)
-# SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
-# IP Build 1948039 on Wed Aug  9 18:19:28 MDT 2017
-# Start of session at: Mon Oct 23 17:21:46 2017
-# Process ID: 16116
-# Current directory: C:/Users/Torgeir Leithe/Google Drive/stor-skole/TFE4141 Design av digitale system 1/RSA/MonPro/ModExp
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent12844 C:\Users\Torgeir Leithe\Google Drive\stor-skole\TFE4141 Design av digitale system 1\RSA\MonPro\ModExp\ModExp.xpr
-# Log file: C:/Users/Torgeir Leithe/Google Drive/stor-skole/TFE4141 Design av digitale system 1/RSA/MonPro/ModExp/vivado.log
-# Journal file: C:/Users/Torgeir Leithe/Google Drive/stor-skole/TFE4141 Design av digitale system 1/RSA/MonPro/ModExp\vivado.jou
+# Vivado v2017.3 (64-bit)
+# SW Build 2018833 on Wed Oct  4 19:58:22 MDT 2017
+# IP Build 2016188 on Wed Oct  4 21:52:56 MDT 2017
+# Start of session at: Wed Oct 25 13:12:27 2017
+# Process ID: 15884
+# Current directory: C:/Users/Torgeir Leithe/Google Drive/stor-skole/TFE4141 Design av digitale system 1/RSA/Git/DD1_project/VHDL-code/ModExp
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent16164 C:\Users\Torgeir Leithe\Google Drive\stor-skole\TFE4141 Design av digitale system 1\RSA\Git\DD1_project\VHDL-code\ModExp\ModExp.xpr
+# Log file: C:/Users/Torgeir Leithe/Google Drive/stor-skole/TFE4141 Design av digitale system 1/RSA/Git/DD1_project/VHDL-code/ModExp/vivado.log
+# Journal file: C:/Users/Torgeir Leithe/Google Drive/stor-skole/TFE4141 Design av digitale system 1/RSA/Git/DD1_project/VHDL-code/ModExp\vivado.jou
 #-----------------------------------------------------------
 start_gui
-open_project {C:/Users/Torgeir Leithe/Google Drive/stor-skole/TFE4141 Design av digitale system 1/RSA/MonPro/ModExp/ModExp.xpr}
+open_project {C:/Users/Torgeir Leithe/Google Drive/stor-skole/TFE4141 Design av digitale system 1/RSA/Git/DD1_project/VHDL-code/ModExp/ModExp.xpr}
 INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter.
-Current project path is 'C:/Users/Torgeir Leithe/Google Drive/stor-skole/TFE4141 Design av digitale system 1/RSA/MonPro/ModExp'
-INFO: [Project 1-313] Project file moved from 'C:/Users/Torgeir Leithe/Google Drive/stor-skole/TFE4141 Design av digitale system 1/RSA/MonPro/ModExp2' since last save.
+Current project path is 'C:/Users/Torgeir Leithe/Google Drive/stor-skole/TFE4141 Design av digitale system 1/RSA/Git/DD1_project/VHDL-code/ModExp'
+INFO: [Project 1-313] Project file moved from 'C:/Users/Torgeir Leithe/Google Drive/stor-skole/TFE4141 Design av digitale system 1/RSA/MonPro/ModExp' since last save.
 Scanning sources...
 Finished scanning sources
+INFO: [Project 1-230] Project 'ModExp.xpr' upgraded for this version of Vivado.
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
-INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2017.2/data/ip'.
-synth_design -rtl -name rtl_1
-Command: synth_design -rtl -name rtl_1
-Starting synth_design
-Using part: xc7z030fbv484-1
-Top: ModExp
----------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 802.082 ; gain = 25.332
----------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'ModExp' [C:/Users/Torgeir Leithe/Google Drive/stor-skole/TFE4141 Design av digitale system 1/RSA/MonPro/ModExp/ModExp.srcs/sources_1/imports/new/ModExp.vhd:51]
-WARNING: [Synth 8-614] signal 'rr_n' is read in the process but is not in the sensitivity list [C:/Users/Torgeir Leithe/Google Drive/stor-skole/TFE4141 Design av digitale system 1/RSA/MonPro/ModExp/ModExp.srcs/sources_1/imports/new/ModExp.vhd:87]
-INFO: [Synth 8-638] synthesizing module 'MonPro' [C:/Users/Torgeir Leithe/Google Drive/stor-skole/TFE4141 Design av digitale system 1/RSA/MonPro/ModExp/ModExp.srcs/sources_1/imports/new/MonPro.vhd:88]
-WARNING: [Synth 8-614] signal 'a_bit' is read in the process but is not in the sensitivity list [C:/Users/Torgeir Leithe/Google Drive/stor-skole/TFE4141 Design av digitale system 1/RSA/MonPro/ModExp/ModExp.srcs/sources_1/imports/new/MonPro.vhd:103]
-INFO: [Synth 8-638] synthesizing module 'MonPro_loop' [C:/Users/Torgeir Leithe/Google Drive/stor-skole/TFE4141 Design av digitale system 1/RSA/MonPro/ModExp/ModExp.srcs/sources_1/imports/new/MonPro.vhd:38]
-INFO: [Synth 8-256] done synthesizing module 'MonPro_loop' (1#1) [C:/Users/Torgeir Leithe/Google Drive/stor-skole/TFE4141 Design av digitale system 1/RSA/MonPro/ModExp/ModExp.srcs/sources_1/imports/new/MonPro.vhd:38]
-WARNING: [Synth 8-614] signal 'n_in' is read in the process but is not in the sensitivity list [C:/Users/Torgeir Leithe/Google Drive/stor-skole/TFE4141 Design av digitale system 1/RSA/MonPro/ModExp/ModExp.srcs/sources_1/imports/new/MonPro.vhd:126]
-INFO: [Synth 8-256] done synthesizing module 'MonPro' (2#1) [C:/Users/Torgeir Leithe/Google Drive/stor-skole/TFE4141 Design av digitale system 1/RSA/MonPro/ModExp/ModExp.srcs/sources_1/imports/new/MonPro.vhd:88]
-INFO: [Synth 8-256] done synthesizing module 'ModExp' (3#1) [C:/Users/Torgeir Leithe/Google Drive/stor-skole/TFE4141 Design av digitale system 1/RSA/MonPro/ModExp/ModExp.srcs/sources_1/imports/new/ModExp.vhd:51]
-WARNING: [Synth 8-3331] design MonPro_loop has unconnected port a_bit[7]
----------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:04 . Memory (MB): peak = 829.137 ; gain = 52.387
----------------------------------------------------------------------------------
-
-Report Check Netlist: 
-+------+------------------+-------+---------+-------+------------------+
-|      |Item              |Errors |Warnings |Status |Description       |
-+------+------------------+-------+---------+-------+------------------+
-|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
-+------+------------------+-------+---------+-------+------------------+
----------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 829.137 ; gain = 52.387
----------------------------------------------------------------------------------
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2017.3/data/ip'.
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+[Wed Oct 25 13:12:54 2017] Launched synth_1...
+Run output will be captured here: C:/Users/Torgeir Leithe/Google Drive/stor-skole/TFE4141 Design av digitale system 1/RSA/Git/DD1_project/VHDL-code/ModExp/ModExp.runs/synth_1/runme.log
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+[Wed Oct 25 13:14:44 2017] Launched synth_1...
+Run output will be captured here: C:/Users/Torgeir Leithe/Google Drive/stor-skole/TFE4141 Design av digitale system 1/RSA/Git/DD1_project/VHDL-code/ModExp/ModExp.runs/synth_1/runme.log
+open_run synth_1 -name synth_1
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xc7z030fbv484-1
+INFO: [Netlist 29-17] Analyzing 1044 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2017.3
 INFO: [Device 21-403] Loading part xc7z030fbv484-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
-
-Processing XDC Constraints
-Initializing timing engine
-Parsing XDC File [C:/Users/Torgeir Leithe/Google Drive/stor-skole/TFE4141 Design av digitale system 1/RSA/MonPro/ModExp/ModExp.srcs/constrs_1/imports/new/ModExp_constraints.xdc]
-Finished Parsing XDC File [C:/Users/Torgeir Leithe/Google Drive/stor-skole/TFE4141 Design av digitale system 1/RSA/MonPro/ModExp/ModExp.srcs/constrs_1/imports/new/ModExp_constraints.xdc]
-Completed Processing XDC Constraints
-
+Parsing XDC File [C:/Users/Torgeir Leithe/Google Drive/stor-skole/TFE4141 Design av digitale system 1/RSA/Git/DD1_project/VHDL-code/ModExp/ModExp.srcs/constrs_1/imports/new/ModExp_constraints.xdc]
+Finished Parsing XDC File [C:/Users/Torgeir Leithe/Google Drive/stor-skole/TFE4141 Design av digitale system 1/RSA/Git/DD1_project/VHDL-code/ModExp/ModExp.srcs/constrs_1/imports/new/ModExp_constraints.xdc]
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-RTL Elaboration Complete:  : Time (s): cpu = 00:00:25 ; elapsed = 00:00:18 . Memory (MB): peak = 1216.121 ; gain = 439.371
-10 Infos, 4 Warnings, 0 Critical Warnings and 0 Errors encountered.
-synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:25 ; elapsed = 00:00:19 . Memory (MB): peak = 1216.121 ; gain = 439.371
+open_run: Time (s): cpu = 00:00:17 ; elapsed = 00:00:14 . Memory (MB): peak = 1220.246 ; gain = 390.270
+launch_runs impl_1 -jobs 2
+[Wed Oct 25 13:17:08 2017] Launched impl_1...
+Run output will be captured here: C:/Users/Torgeir Leithe/Google Drive/stor-skole/TFE4141 Design av digitale system 1/RSA/Git/DD1_project/VHDL-code/ModExp/ModExp.runs/impl_1/runme.log
 launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Torgeir Leithe/Google Drive/stor-skole/TFE4141 Design av digitale system 1/RSA/Git/DD1_project/VHDL-code/ModExp/ModExp.sim/sim_1/behav/xsim'
 INFO: [SIM-utils-51] Simulation object is 'sim_1'
 INFO: [SIM-utils-54] Inspecting design source files for 'ModExp_tb' in fileset 'sim_1'...
 INFO: [USF-XSim-97] Finding global include files...
 INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
 INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
 INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Torgeir Leithe/Google Drive/stor-skole/TFE4141 Design av digitale system 1/RSA/MonPro/ModExp/ModExp.sim/sim_1/behav'
-"xvhdl -m64 --relax -prj ModExp_tb_vhdl.prj"
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Torgeir Leithe/Google Drive/stor-skole/TFE4141 Design av digitale system 1/RSA/MonPro/ModExp/ModExp.srcs/sources_1/imports/new/MonPro.vhd" into library xil_defaultlib
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Torgeir Leithe/Google Drive/stor-skole/TFE4141 Design av digitale system 1/RSA/Git/DD1_project/VHDL-code/ModExp/ModExp.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj ModExp_tb_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Torgeir Leithe/Google Drive/stor-skole/TFE4141 Design av digitale system 1/RSA/Git/DD1_project/VHDL-code/ModExp/ModExp.srcs/sources_1/imports/new/MonPro.vhd" into library xil_defaultlib
 INFO: [VRFC 10-307] analyzing entity MonPro_loop
 INFO: [VRFC 10-307] analyzing entity MonPro
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Torgeir Leithe/Google Drive/stor-skole/TFE4141 Design av digitale system 1/RSA/MonPro/ModExp/ModExp.srcs/sources_1/imports/new/ModExp.vhd" into library xil_defaultlib
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Torgeir Leithe/Google Drive/stor-skole/TFE4141 Design av digitale system 1/RSA/Git/DD1_project/VHDL-code/ModExp/ModExp.srcs/sources_1/imports/new/ModExp.vhd" into library xil_defaultlib
 INFO: [VRFC 10-307] analyzing entity ModExp
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Torgeir Leithe/Google Drive/stor-skole/TFE4141 Design av digitale system 1/RSA/MonPro/ModExp/ModExp.srcs/sim_1/imports/new/ModExp_tb.vhd" into library xil_defaultlib
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Torgeir Leithe/Google Drive/stor-skole/TFE4141 Design av digitale system 1/RSA/Git/DD1_project/VHDL-code/ModExp/ModExp.srcs/sim_1/imports/new/ModExp_tb.vhd" into library xil_defaultlib
 INFO: [VRFC 10-307] analyzing entity ModExp_tb
 INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
 INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/Torgeir Leithe/Google Drive/stor-skole/TFE4141 Design av digitale system 1/RSA/MonPro/ModExp/ModExp.sim/sim_1/behav'
-Vivado Simulator 2017.2
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/Torgeir Leithe/Google Drive/stor-skole/TFE4141 Design av digitale system 1/RSA/Git/DD1_project/VHDL-code/ModExp/ModExp.sim/sim_1/behav/xsim'
+Vivado Simulator 2017.3
 Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2017.2/bin/unwrapped/win64.o/xelab.exe -wto 4897b871f22540f8b2e756fd17e4f0c2 --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot ModExp_tb_behav xil_defaultlib.ModExp_tb -log elaborate.log 
+Running: C:/Xilinx/Vivado/2017.3/bin/unwrapped/win64.o/xelab.exe -wto 4897b871f22540f8b2e756fd17e4f0c2 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot ModExp_tb_behav xil_defaultlib.ModExp_tb -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
 Completed static elaboration
@@ -106,38 +86,23 @@ Compiling architecture behavioral of entity xil_defaultlib.ModExp [modexp_defaul
 Compiling architecture behavioral of entity xil_defaultlib.modexp_tb
 Built simulation snapshot ModExp_tb_behav
 
-****** Webtalk v2017.2.1 (64-bit)
-  **** SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
-  **** IP Build 1948039 on Wed Aug  9 18:19:28 MDT 2017
+****** Webtalk v2017.3 (64-bit)
+  **** SW Build 2018833 on Wed Oct  4 19:58:22 MDT 2017
+  **** IP Build 2016188 on Wed Oct  4 21:52:56 MDT 2017
     ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 
 source C:/Users/Torgeir -notrace
 couldn't read file "C:/Users/Torgeir": no such file or directory
-INFO: [Common 17-206] Exiting Webtalk at Mon Oct 23 17:22:51 2017...
+INFO: [Common 17-206] Exiting Webtalk at Wed Oct 25 13:18:19 2017...
 INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
 INFO: [USF-XSim-4] XSim::Simulate design
-INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/Torgeir Leithe/Google Drive/stor-skole/TFE4141 Design av digitale system 1/RSA/MonPro/ModExp/ModExp.sim/sim_1/behav'
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/Torgeir Leithe/Google Drive/stor-skole/TFE4141 Design av digitale system 1/RSA/Git/DD1_project/VHDL-code/ModExp/ModExp.sim/sim_1/behav/xsim'
 INFO: [USF-XSim-98] *** Running xsim
-   with args "ModExp_tb_behav -key {Behavioral:sim_1:Functional:ModExp_tb} -tclbatch {ModExp_tb.tcl} -view {C:/Users/Torgeir Leithe/Google Drive/stor-skole/TFE4141 Design av digitale system 1/RSA/MonPro/ModExp/ModExp_tb_behav.wcfg} -log {simulate.log}"
+   with args "ModExp_tb_behav -key {Behavioral:sim_1:Functional:ModExp_tb} -tclbatch {ModExp_tb.tcl} -view {{C:/Users/Torgeir Leithe/Google Drive/stor-skole/TFE4141 Design av digitale system 1/RSA/Git/DD1_project/VHDL-code/ModExp/ModExp_tb_behav.wcfg}} -log {simulate.log}"
 INFO: [USF-XSim-8] Loading simulator feature
-Vivado Simulator 2017.2
+Vivado Simulator 2017.3
 Time resolution is 1 ps
-open_wave_config C:/Users/Torgeir
-ERROR: [Wavedata 42-2] Error while reading WCFG file 'C:/Users/Torgeir.wcfg'.
-open_wave_config Leithe/Google
-ERROR: [Wavedata 42-2] Error while reading WCFG file 'C:/Users/Torgeir Leithe/Google Drive/stor-skole/TFE4141 Design av digitale system 1/RSA/MonPro/ModExp/ModExp.sim/sim_1/behav/Leithe/Google.wcfg'.
-open_wave_config Drive/stor-skole/TFE4141
-ERROR: [Wavedata 42-2] Error while reading WCFG file 'C:/Users/Torgeir Leithe/Google Drive/stor-skole/TFE4141 Design av digitale system 1/RSA/MonPro/ModExp/ModExp.sim/sim_1/behav/Drive/stor-skole/TFE4141.wcfg'.
-open_wave_config Design
-ERROR: [Wavedata 42-2] Error while reading WCFG file 'C:/Users/Torgeir Leithe/Google Drive/stor-skole/TFE4141 Design av digitale system 1/RSA/MonPro/ModExp/ModExp.sim/sim_1/behav/Design.wcfg'.
-open_wave_config av
-ERROR: [Wavedata 42-2] Error while reading WCFG file 'C:/Users/Torgeir Leithe/Google Drive/stor-skole/TFE4141 Design av digitale system 1/RSA/MonPro/ModExp/ModExp.sim/sim_1/behav/av.wcfg'.
-open_wave_config digitale
-ERROR: [Wavedata 42-2] Error while reading WCFG file 'C:/Users/Torgeir Leithe/Google Drive/stor-skole/TFE4141 Design av digitale system 1/RSA/MonPro/ModExp/ModExp.sim/sim_1/behav/digitale.wcfg'.
-open_wave_config system
-ERROR: [Wavedata 42-2] Error while reading WCFG file 'C:/Users/Torgeir Leithe/Google Drive/stor-skole/TFE4141 Design av digitale system 1/RSA/MonPro/ModExp/ModExp.sim/sim_1/behav/system.wcfg'.
-open_wave_config 1/RSA/MonPro/ModExp/ModExp_tb_behav.wcfg
-ERROR: [Wavedata 42-2] Error while reading WCFG file 'C:/Users/Torgeir Leithe/Google Drive/stor-skole/TFE4141 Design av digitale system 1/RSA/MonPro/ModExp/ModExp.sim/sim_1/behav/1/RSA/MonPro/ModExp/ModExp_tb_behav.wcfg'.
+open_wave_config {C:/Users/Torgeir Leithe/Google Drive/stor-skole/TFE4141 Design av digitale system 1/RSA/Git/DD1_project/VHDL-code/ModExp/ModExp_tb_behav.wcfg}
 source ModExp_tb.tcl
 # set curr_wave [current_wave_config]
 # if { [string length $curr_wave] == 0 } {
@@ -151,82 +116,12 @@ source ModExp_tb.tcl
 # run 1000ns
 INFO: [USF-XSim-96] XSim completed. Design snapshot 'ModExp_tb_behav' loaded.
 INFO: [USF-XSim-97] XSim simulation ran for 1000ns
-launch_simulation: Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 1234.395 ; gain = 18.273
-relaunch_sim
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [SIM-utils-54] Inspecting design source files for 'ModExp_tb' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
-INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Torgeir Leithe/Google Drive/stor-skole/TFE4141 Design av digitale system 1/RSA/MonPro/ModExp/ModExp.sim/sim_1/behav'
-"xvhdl -m64 --relax -prj ModExp_tb_vhdl.prj"
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Torgeir Leithe/Google Drive/stor-skole/TFE4141 Design av digitale system 1/RSA/MonPro/ModExp/ModExp.srcs/sources_1/imports/new/MonPro.vhd" into library xil_defaultlib
-INFO: [VRFC 10-307] analyzing entity MonPro_loop
-INFO: [VRFC 10-307] analyzing entity MonPro
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Torgeir Leithe/Google Drive/stor-skole/TFE4141 Design av digitale system 1/RSA/MonPro/ModExp/ModExp.srcs/sources_1/imports/new/ModExp.vhd" into library xil_defaultlib
-INFO: [VRFC 10-307] analyzing entity ModExp
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Torgeir Leithe/Google Drive/stor-skole/TFE4141 Design av digitale system 1/RSA/MonPro/ModExp/ModExp.srcs/sim_1/imports/new/ModExp_tb.vhd" into library xil_defaultlib
-INFO: [VRFC 10-307] analyzing entity ModExp_tb
-INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/Torgeir Leithe/Google Drive/stor-skole/TFE4141 Design av digitale system 1/RSA/MonPro/ModExp/ModExp.sim/sim_1/behav'
-Vivado Simulator 2017.2
-Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2017.2/bin/unwrapped/win64.o/xelab.exe -wto 4897b871f22540f8b2e756fd17e4f0c2 --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot ModExp_tb_behav xil_defaultlib.ModExp_tb -log elaborate.log 
-Using 2 slave threads.
-Starting static elaboration
-Completed static elaboration
-Starting simulation data flow analysis
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling package std.standard
-Compiling package std.textio
-Compiling package ieee.std_logic_1164
-Compiling package ieee.numeric_std
-Compiling package ieee.std_logic_arith
-Compiling architecture behavioral of entity xil_defaultlib.MonPro_loop [monpro_loop_default]
-Compiling architecture behavioral of entity xil_defaultlib.MonPro [monpro_default]
-Compiling architecture behavioral of entity xil_defaultlib.ModExp [modexp_default]
-Compiling architecture behavioral of entity xil_defaultlib.modexp_tb
-Built simulation snapshot ModExp_tb_behav
-INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
-Vivado Simulator 2017.2
-Time resolution is 1 ps
-relaunch_sim: Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 1248.777 ; gain = 0.000
-open_wave_config {C:/Users/Torgeir Leithe/Google Drive/stor-skole/TFE4141 Design av digitale system 1/RSA/MonPro/ModExp/ModExp_tb_behav.wcfg}
+launch_simulation: Time (s): cpu = 00:00:05 ; elapsed = 00:00:08 . Memory (MB): peak = 1653.078 ; gain = 48.598
 restart
 INFO: [Simtcl 6-17] Simulation restarted
 run 163.83 us
-reset_run synth_1
-WARNING: [Vivado 12-1017] Problems encountered:
-1. Failed to delete one or more files in run directory C:/Users/Torgeir Leithe/Google Drive/stor-skole/TFE4141 Design av digitale system 1/RSA/MonPro/ModExp/ModExp.runs/synth_1
-
-launch_runs synth_1 -jobs 2
-[Tue Oct 24 11:36:44 2017] Launched synth_1...
-Run output will be captured here: C:/Users/Torgeir Leithe/Google Drive/stor-skole/TFE4141 Design av digitale system 1/RSA/MonPro/ModExp/ModExp.runs/synth_1/runme.log
-restart
-INFO: [Simtcl 6-17] Simulation restarted
 run 163.83 us
-open_run synth_1 -name synth_1
-Design is defaulting to impl run constrset: constrs_1
-Design is defaulting to synth run part: xc7z030fbv484-1
-INFO: [Netlist 29-17] Analyzing 918 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
-INFO: [Project 1-479] Netlist was created with Vivado 2017.2.1
-INFO: [Project 1-570] Preparing netlist for logic optimization
-Parsing XDC File [C:/Users/Torgeir Leithe/Google Drive/stor-skole/TFE4141 Design av digitale system 1/RSA/MonPro/ModExp/ModExp.srcs/constrs_1/imports/new/ModExp_constraints.xdc]
-Finished Parsing XDC File [C:/Users/Torgeir Leithe/Google Drive/stor-skole/TFE4141 Design av digitale system 1/RSA/MonPro/ModExp/ModExp.srcs/constrs_1/imports/new/ModExp_constraints.xdc]
-INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-INFO: [Project 1-111] Unisim Transformation Summary:
-No Unisim elements were transformed.
-
-report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -name timing_1
-INFO: [Timing 38-35] Done setting XDC timing constraints.
-INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
-INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
-report_timing_summary: Time (s): cpu = 00:00:15 ; elapsed = 00:00:13 . Memory (MB): peak = 2043.289 ; gain = 467.508
 close_sim
 INFO: [Simtcl 6-16] Simulation closed
 exit
-INFO: [Common 17-206] Exiting Vivado at Tue Oct 24 12:14:22 2017...
+INFO: [Common 17-206] Exiting Vivado at Wed Oct 25 13:35:53 2017...

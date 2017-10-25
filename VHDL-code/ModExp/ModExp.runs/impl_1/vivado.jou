@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2017.3 (64-bit)
+# SW Build 2018833 on Wed Oct  4 19:58:22 MDT 2017
+# IP Build 2016188 on Wed Oct  4 21:52:56 MDT 2017
+# Start of session at: Wed Oct 25 13:17:20 2017
+# Process ID: 3564
+# Current directory: C:/Users/Torgeir Leithe/Google Drive/stor-skole/TFE4141 Design av digitale system 1/RSA/Git/DD1_project/VHDL-code/ModExp/ModExp.runs/impl_1
+# Command line: vivado.exe -log ModExp.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source ModExp.tcl -notrace
+# Log file: C:/Users/Torgeir Leithe/Google Drive/stor-skole/TFE4141 Design av digitale system 1/RSA/Git/DD1_project/VHDL-code/ModExp/ModExp.runs/impl_1/ModExp.vdi
+# Journal file: C:/Users/Torgeir Leithe/Google Drive/stor-skole/TFE4141 Design av digitale system 1/RSA/Git/DD1_project/VHDL-code/ModExp/ModExp.runs/impl_1\vivado.jou
+#-----------------------------------------------------------
+source ModExp.tcl -notrace

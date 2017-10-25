@@ -100,7 +100,7 @@ begin
     a_test(to_integer(unsigned(a_bit(6 downto 0)))) <= '1';
   end process;
   
-  process(n_in,a_test) 
+  process(n_in,a_test,a_bit) 
   begin
     if(unsigned(a_test) > unsigned(n_in)) OR (a_bit > "01111111") then
       MP_done <= '1';
@@ -132,7 +132,6 @@ begin
     end process;
  
   process(clk,a_bit,reset_n) begin
-
     if(clk'event and clk = '1') then
       if(reset_n = '1') then
         a_bit <= (others => '0');

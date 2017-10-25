@@ -1,36 +1,29 @@
 #-----------------------------------------------------------
-# Vivado v2017.2.1 (64-bit)
-# SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
-# IP Build 1948039 on Wed Aug  9 18:19:28 MDT 2017
-# Start of session at: Mon Oct 23 17:21:46 2017
-# Process ID: 16116
-# Current directory: C:/Users/Torgeir Leithe/Google Drive/stor-skole/TFE4141 Design av digitale system 1/RSA/MonPro/ModExp
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent12844 C:\Users\Torgeir Leithe\Google Drive\stor-skole\TFE4141 Design av digitale system 1\RSA\MonPro\ModExp\ModExp.xpr
-# Log file: C:/Users/Torgeir Leithe/Google Drive/stor-skole/TFE4141 Design av digitale system 1/RSA/MonPro/ModExp/vivado.log
-# Journal file: C:/Users/Torgeir Leithe/Google Drive/stor-skole/TFE4141 Design av digitale system 1/RSA/MonPro/ModExp\vivado.jou
+# Vivado v2017.3 (64-bit)
+# SW Build 2018833 on Wed Oct  4 19:58:22 MDT 2017
+# IP Build 2016188 on Wed Oct  4 21:52:56 MDT 2017
+# Start of session at: Wed Oct 25 13:12:27 2017
+# Process ID: 15884
+# Current directory: C:/Users/Torgeir Leithe/Google Drive/stor-skole/TFE4141 Design av digitale system 1/RSA/Git/DD1_project/VHDL-code/ModExp
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent16164 C:\Users\Torgeir Leithe\Google Drive\stor-skole\TFE4141 Design av digitale system 1\RSA\Git\DD1_project\VHDL-code\ModExp\ModExp.xpr
+# Log file: C:/Users/Torgeir Leithe/Google Drive/stor-skole/TFE4141 Design av digitale system 1/RSA/Git/DD1_project/VHDL-code/ModExp/vivado.log
+# Journal file: C:/Users/Torgeir Leithe/Google Drive/stor-skole/TFE4141 Design av digitale system 1/RSA/Git/DD1_project/VHDL-code/ModExp\vivado.jou
 #-----------------------------------------------------------
 start_gui
-open_project {C:/Users/Torgeir Leithe/Google Drive/stor-skole/TFE4141 Design av digitale system 1/RSA/MonPro/ModExp/ModExp.xpr}
-synth_design -rtl -name rtl_1
-launch_simulation
-open_wave_config C:/Users/Torgeir
-open_wave_config Leithe/Google
-open_wave_config Drive/stor-skole/TFE4141
-open_wave_config Design
-open_wave_config av
-open_wave_config digitale
-open_wave_config system
-open_wave_config 1/RSA/MonPro/ModExp/ModExp_tb_behav.wcfg
-source ModExp_tb.tcl
-relaunch_sim
-open_wave_config {C:/Users/Torgeir Leithe/Google Drive/stor-skole/TFE4141 Design av digitale system 1/RSA/MonPro/ModExp/ModExp_tb_behav.wcfg}
-restart
-run 163.83 us
+open_project {C:/Users/Torgeir Leithe/Google Drive/stor-skole/TFE4141 Design av digitale system 1/RSA/Git/DD1_project/VHDL-code/ModExp/ModExp.xpr}
 reset_run synth_1
 launch_runs synth_1 -jobs 2
 wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+wait_on_run synth_1
+open_run synth_1 -name synth_1
+launch_runs impl_1 -jobs 2
+wait_on_run impl_1
+launch_simulation
+open_wave_config {C:/Users/Torgeir Leithe/Google Drive/stor-skole/TFE4141 Design av digitale system 1/RSA/Git/DD1_project/VHDL-code/ModExp/ModExp_tb_behav.wcfg}
+source ModExp_tb.tcl
 restart
 run 163.83 us
-open_run synth_1 -name synth_1
-report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -name timing_1
+run 163.83 us
 close_sim

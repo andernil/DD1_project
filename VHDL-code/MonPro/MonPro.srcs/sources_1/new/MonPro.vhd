@@ -104,9 +104,9 @@ begin
     end if;
   end process;
   
-  process(n_in,a_test) 
+  process(n_in,a_test,a_bit) 
   begin
-    if(unsigned(a_test) > unsigned(n_in)) then
+    if(unsigned(a_test) > unsigned(n_in) or (unsigned(a_bit) > "01111111")) then
       MP_done <= '1';
     else 
       MP_done <= '0';
@@ -127,7 +127,7 @@ begin
     u_temp_ut => u_int_ut,
     u_temp_in => u_int_in 
   );
-    process(u_int_in) begin
+    process(u_int_in,n_in) begin
         if (unsigned(u_int_in) > unsigned(n_in)) then
             u_out <= std_logic_vector(unsigned(u_int_in) - unsigned(n_in));
         else

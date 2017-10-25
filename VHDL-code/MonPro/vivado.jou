@@ -11,3 +11,9 @@
 #-----------------------------------------------------------
 start_gui
 open_project {C:/Users/Torgeir Leithe/Google Drive/stor-skole/TFE4141 Design av digitale system 1/RSA/Git/DD1_project/VHDL-code/MonPro/MonPro.xpr}
+launch_simulation
+open_wave_config {C:/Users/Torgeir Leithe/Google Drive/stor-skole/TFE4141 Design av digitale system 1/RSA/Git/DD1_project/VHDL-code/MonPro/MonPro_tb_func_synth.wcfg}
+source MonPro_tb.tcl
+restart
+run 163.83 us
+close_sim

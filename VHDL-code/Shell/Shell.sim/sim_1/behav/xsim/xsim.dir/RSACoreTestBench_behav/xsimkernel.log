@@ -1,0 +1,4 @@
+Running: xsim.dir/RSACoreTestBench_behav/xsimk.exe -simmode gui -wdb RSACoreTestBench_behav.wdb -simrunnum 0 -socket 64593
+Design successfully loaded
+Design Loading Memory Usage: 6372 KB (Peak: 6372 KB)
+Design Loading CPU Usage: 0 ms

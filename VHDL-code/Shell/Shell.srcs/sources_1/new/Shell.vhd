@@ -65,18 +65,18 @@ signal out_state: std_logic;
 signal counter : STD_LOGIC_VECTOR (4 downto 0);
 begin
 
-process(InitRSA,StartRSA,out_state,resetn) begin
---    if (clk'event and clk = '1') then
+process(InitRSA,StartRSA,ME_done,resetn,clk) begin
+    if (clk'event and clk = '1') then
       if (resetn = '0') then
         state <= "00";
       elsif(InitRSA = '1') then
         state <= "01";
       elsif(StartRSA = '1') then
         state <= "10";
-      elsif (out_state = '1') then
+      elsif (ME_done = '1') then
         state <= "11";
       end if;
---   end if;
+   end if;
 end process;
 
 process(state,counter) begin
@@ -101,12 +101,12 @@ end process;
 
 process(counter, clk) begin
   if (clk'event and clk = '1') then
-  if (state = "01") then
+  if (state = "01" OR InitRSA = '1') then
     Data_in_reg(31 downto 0) <= Data_in_reg(63 downto 32);
     Data_in_reg(63 downto 32) <= Data_in_reg(95 downto 64);
     Data_in_reg(95 downto 64) <= Data_in_reg(127 downto 96);
     Data_in_reg(127 downto 96) <= DataIn;
-  elsif(state = "10" and counter < "00011") then 
+  elsif((state = "10" and counter < "00011") or StartRSA = '1') then 
     Data_in_reg(31 downto 0) <= Data_in_reg(63 downto 32);
     Data_in_reg(63 downto 32) <= Data_in_reg(95 downto 64);
     Data_in_reg(95 downto 64) <= Data_in_reg(127 downto 96);

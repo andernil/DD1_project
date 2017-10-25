@@ -1,7 +1,7 @@
 -- Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2017.3 (win64) Build 2018833 Wed Oct  4 19:58:22 MDT 2017
--- Date        : Wed Oct 25 16:35:09 2017
+-- Date        : Wed Oct 25 16:57:34 2017
 -- Host        : Tenke-Torgeir running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -mode funcsim -nolib -force -file
 --               C:/git/DD1_project/VHDL-code/MonPro/MonPro.sim/sim_1/synth/func/xsim/MonPro_tb_func_synth.vhd

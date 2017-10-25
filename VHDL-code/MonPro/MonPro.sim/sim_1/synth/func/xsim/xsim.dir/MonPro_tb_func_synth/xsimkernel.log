@@ -1,7 +1,7 @@
-Running: xsim.dir/MonPro_tb_func_synth/xsimk.exe -simmode gui -wdb MonPro_tb_func_synth.wdb -simrunnum 0 -socket 49604
+Running: xsim.dir/MonPro_tb_func_synth/xsimk.exe -simmode gui -wdb MonPro_tb_func_synth.wdb -simrunnum 0 -socket 49793
 Design successfully loaded
-Design Loading Memory Usage: 9048 KB (Peak: 9048 KB)
+Design Loading Memory Usage: 9052 KB (Peak: 9052 KB)
 Design Loading CPU Usage: 15 ms
 Simulation completed
-Simulation Memory Usage: 18752 KB (Peak: 18752 KB)
-Simulation CPU Usage: 3186 ms
+Simulation Memory Usage: 18756 KB (Peak: 18756 KB)
+Simulation CPU Usage: 4640 ms

@@ -1,6 +1,6 @@
 webtalk_init -webtalk_dir C:/git/DD1_project/VHDL-code/MonPro/MonPro.sim/sim_1/synth/func/xsim/xsim.dir/MonPro_tb_func_synth/webtalk/
 webtalk_register_client -client project
-webtalk_add_data -client project -key date_generated -value "Wed Oct 25 16:39:29 2017" -context "software_version_and_target_device"
+webtalk_add_data -client project -key date_generated -value "Wed Oct 25 22:36:52 2017" -context "software_version_and_target_device"
 webtalk_add_data -client project -key product_version -value "XSIM v2017.3 (64-bit)" -context "software_version_and_target_device"
 webtalk_add_data -client project -key build_version -value "2018833" -context "software_version_and_target_device"
 webtalk_add_data -client project -key os_platform -value "WIN64" -context "software_version_and_target_device"
@@ -14,7 +14,7 @@ webtalk_add_data -client project -key target_package -value "not_applicable" -co
 webtalk_add_data -client project -key target_speed -value "not_applicable" -context "software_version_and_target_device"
 webtalk_add_data -client project -key random_id -value "ecf43f01-722c-4695-ad9a-78068be66dbf" -context "software_version_and_target_device"
 webtalk_add_data -client project -key project_id -value "44ec1947f6b74393a78fc062adcc6d79" -context "software_version_and_target_device"
-webtalk_add_data -client project -key project_iteration -value "18" -context "software_version_and_target_device"
+webtalk_add_data -client project -key project_iteration -value "20" -context "software_version_and_target_device"
 webtalk_add_data -client project -key os_name -value "Microsoft Windows 8 or later , 64-bit" -context "user_environment"
 webtalk_add_data -client project -key os_release -value "major release  (build 9200)" -context "user_environment"
 webtalk_add_data -client project -key cpu_name -value "Intel(R) Core(TM) i5-6300HQ CPU @ 2.30GHz" -context "user_environment"
@@ -24,9 +24,9 @@ webtalk_add_data -client project -key system_ram -value "8.000 GB" -context "use
 webtalk_register_client -client xsim
 webtalk_add_data -client xsim -key Command -value "xsim" -context "xsim\\command_line_options"
 webtalk_add_data -client xsim -key trace_waveform -value "true" -context "xsim\\usage"
-webtalk_add_data -client xsim -key runtime -value "15815100 ps" -context "xsim\\usage"
-webtalk_add_data -client xsim -key iteration -value "18" -context "xsim\\usage"
-webtalk_add_data -client xsim -key Simulation_Time -value "3.19_sec" -context "xsim\\usage"
-webtalk_add_data -client xsim -key Simulation_Memory -value "18752_KB" -context "xsim\\usage"
-webtalk_transmit -clientid 3546846102 -regid "" -xml C:/git/DD1_project/VHDL-code/MonPro/MonPro.sim/sim_1/synth/func/xsim/xsim.dir/MonPro_tb_func_synth/webtalk/usage_statistics_ext_xsim.xml -html C:/git/DD1_project/VHDL-code/MonPro/MonPro.sim/sim_1/synth/func/xsim/xsim.dir/MonPro_tb_func_synth/webtalk/usage_statistics_ext_xsim.html -wdm C:/git/DD1_project/VHDL-code/MonPro/MonPro.sim/sim_1/synth/func/xsim/xsim.dir/MonPro_tb_func_synth/webtalk/usage_statistics_ext_xsim.wdm -intro "<H3>XSIM Usage Report</H3><BR>"
+webtalk_add_data -client xsim -key runtime -value "24025100 ps" -context "xsim\\usage"
+webtalk_add_data -client xsim -key iteration -value "27" -context "xsim\\usage"
+webtalk_add_data -client xsim -key Simulation_Time -value "4.64_sec" -context "xsim\\usage"
+webtalk_add_data -client xsim -key Simulation_Memory -value "18756_KB" -context "xsim\\usage"
+webtalk_transmit -clientid 3491761313 -regid "" -xml C:/git/DD1_project/VHDL-code/MonPro/MonPro.sim/sim_1/synth/func/xsim/xsim.dir/MonPro_tb_func_synth/webtalk/usage_statistics_ext_xsim.xml -html C:/git/DD1_project/VHDL-code/MonPro/MonPro.sim/sim_1/synth/func/xsim/xsim.dir/MonPro_tb_func_synth/webtalk/usage_statistics_ext_xsim.html -wdm C:/git/DD1_project/VHDL-code/MonPro/MonPro.sim/sim_1/synth/func/xsim/xsim.dir/MonPro_tb_func_synth/webtalk/usage_statistics_ext_xsim.wdm -intro "<H3>XSIM Usage Report</H3><BR>"
 webtalk_terminate

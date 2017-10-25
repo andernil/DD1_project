@@ -20,9 +20,10 @@
 
 
 library IEEE;
-library work;
 use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.numeric_std.all;
+library work;
+
 -- Uncomment the following library declaration if using
 -- arithmetic functions with Signed or Unsigned values
 --use IEEE.NUMERIC_STD.ALL;

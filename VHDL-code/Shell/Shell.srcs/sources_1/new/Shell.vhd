@@ -58,12 +58,14 @@ signal ME_done : STD_LOGIC;
 signal M_out   : STD_LOGIC_VECTOR (127 downto 0);
 signal Data_in_reg : STD_LOGIC_VECTOR (127 downto 0);
 
+signal Data_out_reg: STD_LOGIC_VECTOR (127 downto 0);
+
 signal state   : STD_LOGIC_VECTOR (1 downto 0);
-signal in_state: std_logic;
+signal out_state: std_logic;
 signal counter : STD_LOGIC_VECTOR (4 downto 0);
 begin
 
-process(InitRSA,StartRSA,ME_done,resetn,clk) begin
+process(InitRSA,StartRSA,out_state,resetn) begin
 --    if (clk'event and clk = '1') then
       if (resetn = '0') then
         state <= "00";
@@ -71,30 +73,57 @@ process(InitRSA,StartRSA,ME_done,resetn,clk) begin
         state <= "01";
       elsif(StartRSA = '1') then
         state <= "10";
-      elsif (ME_done = '1') then
+      elsif (out_state = '1') then
         state <= "11";
       end if;
 --   end if;
 end process;
 
-process(clk,state,counter,InitRSA) begin
-  if (InitRSA = '1') then 
+process(state,counter) begin
+  if(state = "01" and unsigned(counter) > "01111") then
+    CoreFinished <= '1';
+  elsif (state = "11") then
+    CoreFinished <= '1';
+  else
+    CoreFinished <= '0';
+  end if;
+end process;
+
+process(clk,state,counter,InitRSA,StartRSA) begin
+  if (InitRSA = '1' or StartRSA = '1' or state = "00" or state = "11") then
       counter <= (others => '0');
-  elsif (clk'event and clk = '1' and state = "01") then
+  elsif (clk'event and clk = '1') then
+    if (counter <= "01111") then
       counter <= std_logic_vector(unsigned(counter) + "1");
+    end if;
   end if;
 end process;
 
 process(counter, clk) begin
-  if (clk'event and clk = '1' and state = "01") then
+  if (clk'event and clk = '1') then
+  if (state = "01") then
     Data_in_reg(31 downto 0) <= Data_in_reg(63 downto 32);
     Data_in_reg(63 downto 32) <= Data_in_reg(95 downto 64);
     Data_in_reg(95 downto 64) <= Data_in_reg(127 downto 96);
     Data_in_reg(127 downto 96) <= DataIn;
-        
+  elsif(state = "10" and counter < "00011") then 
+    Data_in_reg(31 downto 0) <= Data_in_reg(63 downto 32);
+    Data_in_reg(63 downto 32) <= Data_in_reg(95 downto 64);
+    Data_in_reg(95 downto 64) <= Data_in_reg(127 downto 96);
+    Data_in_reg(127 downto 96) <= DataIn;  
+  end if;
   end if;
 end process;
 
+process(state, counter) begin
+  if((state = "10") and (counter > "00011")) then
+    reset_ME <= '0';
+  elsif(state = "11") then
+    reset_ME <= '0';
+  else
+    reset_ME <= '1';
+  end if;
+end process;
 
 process(counter, clk) begin
   if (clk'event and clk = '1' and state = "01") then
@@ -109,6 +138,26 @@ process(counter, clk) begin
 end process;
 
 M_in <= Data_in_reg;
+
+process(ME_done,clk,M_Out,Data_out_reg,out_state,resetn)begin
+  if(resetn = '0') then
+    out_state <= '0';
+  elsif(clk'event and clk = '1')then
+    if(out_state = '0') then
+      Data_out_reg <= M_out;
+      if(ME_done = '1') then
+        out_state <= '1';
+      end if;
+    else
+      Data_out_reg(31 downto 0)  <= Data_out_reg(63  downto 32);
+      Data_out_reg(63 downto 32) <= Data_out_reg(95  downto 64);
+      Data_out_reg(95 downto 64) <= Data_out_reg(127 downto 96);
+    end if;
+  end if;
+end process;
+
+DataOut <= Data_out_reg(31 downto 0);
+
 ModExp: entity work.ModExp 
     port map (
 clk     => clk,

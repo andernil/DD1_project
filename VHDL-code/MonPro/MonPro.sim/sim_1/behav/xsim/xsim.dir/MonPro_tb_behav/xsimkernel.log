@@ -2,3 +2,6 @@ Running: xsim.dir/MonPro_tb_behav/xsimk.exe -simmode gui -wdb MonPro_tb_behav.wd
 Design successfully loaded
 Design Loading Memory Usage: 6304 KB (Peak: 6304 KB)
 Design Loading CPU Usage: 0 ms
+Simulation completed
+Simulation Memory Usage: 6980 KB (Peak: 6980 KB)
+Simulation CPU Usage: 15 ms

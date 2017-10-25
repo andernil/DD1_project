@@ -1449,3 +1449,10 @@ Vivado Simulator 2017.3
 Time resolution is 1 ps
 relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:10 . Memory (MB): peak = 1820.465 ; gain = 0.000
 run 163.83 us
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+save_wave_config {C:/git/DD1_project/VHDL-code/MonPro/MonPro_tb_func_synth.wcfg}
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+exit
+INFO: [Common 17-206] Exiting Vivado at Wed Oct 25 16:39:35 2017...

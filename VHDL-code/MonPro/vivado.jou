@@ -60,3 +60,6 @@ source MonPro_tb.tcl
 relaunch_sim
 relaunch_sim
 run 163.83 us
+close_sim
+save_wave_config {C:/git/DD1_project/VHDL-code/MonPro/MonPro_tb_func_synth.wcfg}
+close_sim

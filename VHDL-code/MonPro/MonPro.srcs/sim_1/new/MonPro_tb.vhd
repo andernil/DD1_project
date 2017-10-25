@@ -37,7 +37,9 @@ architecture Behavioral of MonPro_tb is
   signal    u_out   : STD_LOGIC_VECTOR (127 downto 0);
   signal    clk     : std_logic := '0';
   signal    reset_n : std_logic := '0';
---  signal    MP_done : std_logic;
+  signal    MP_done : std_logic;
+
+  signal    MP_done_test : std_logic;
 
 begin
 
@@ -52,8 +54,8 @@ begin
       n_in  => n_in, 
       b_in  => b_in,            
       a_in  => a_in,
-      u_out => u_out
---      MP_done => MP_done
+      u_out => u_out,
+      MP_done => MP_done
       
     );
 
@@ -64,19 +66,31 @@ begin
   reset_n <= '1';
   
   wait for CLK_PERIOD/2;
-  n_in <= x"00000000000000000000000000000143";
-  a_in <= x"0000000000000000000000000000000f";
-  b_in <= x"00000000000000000000000000000022";  
+--  n_in <= x"00000000000000000000000000000143";
+--  a_in <= x"0000000000000000000000000000000f";
+--  b_in <= x"00000000000000000000000000000022";  
 --136
---  n_in <= x"9236e1c77cf9a0aa7e906d47fd6f26cd";
---  a_in <= x"4cc2575b23de0d7ed530f17701f38eea";
---  b_in <= x"48d9d6bbaa1d12d730b373b4e12e9440";    
+--  n_in <= x"00000000000000000000000000001143";
+--  a_in <= x"0000000000000000000000000000001f";
+--  b_in <= x"00000000000000000000000000000122";  
+--3379
+  n_in <= x"9236e1c77cf9a0aa7e906d47fd6f26cd";
+  a_in <= x"4cc2575b23de0d7ed530f17701f38eea";
+  b_in <= x"48d9d6bbaa1d12d730b373b4e12e9440";    
   --59851687672952017923648942054037034922
     wait for 3*CLK_PERIOD;
   reset_n <= '0';  
   
   wait;
   
+  end process;
+  
+  TEST: process(MP_done,reset_n) begin
+    if(reset_n = '1') then
+      MP_done_test <= '0';
+    elsif(MP_done = '1') then
+      MP_done_test <= '1';
+    end if;
   end process;
   
 end Behavioral;

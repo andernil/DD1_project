@@ -3,23 +3,22 @@
    <wave_state>
    </wave_state>
    <db_ref_list>
-      <db_ref path="MonPro_tb_func_synth.wdb" id="1">
+      <db_ref path="MonPro_tb_behav.wdb" id="1">
          <top_modules>
             <top_module name="MonPro_tb" />
-            <top_module name="glbl" />
          </top_modules>
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="915000000fs"></ZoomStartTime>
-      <ZoomEndTime time="968200001fs"></ZoomEndTime>
-      <Cursor1Time time="1000000000fs"></Cursor1Time>
+      <ZoomStartTime time="142945367fs"></ZoomStartTime>
+      <ZoomEndTime time="275273168fs"></ZoomEndTime>
+      <Cursor1Time time="165000000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="144"></NameColumnWidth>
-      <ValueColumnWidth column_width="96"></ValueColumnWidth>
+      <ValueColumnWidth column_width="92"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="11" />
+   <WVObjectSize size="14" />
    <wvobject fp_name="/MonPro_tb/n_in" type="array">
       <obj_property name="ElementShortName">n_in[127:0]</obj_property>
       <obj_property name="ObjectShortName">n_in[127:0]</obj_property>
@@ -58,8 +57,8 @@
       <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
    <wvobject fp_name="/MonPro_tb/dut/loopti_loop/u_int" type="array">
-      <obj_property name="ElementShortName">u_int[127:0]</obj_property>
-      <obj_property name="ObjectShortName">u_int[127:0]</obj_property>
+      <obj_property name="ElementShortName">u_int[128:0]</obj_property>
+      <obj_property name="ObjectShortName">u_int[128:0]</obj_property>
       <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
    <wvobject fp_name="/MonPro_tb/dut/u_int_ut" type="array">
@@ -67,9 +66,20 @@
       <obj_property name="ObjectShortName">u_int_ut[127:0]</obj_property>
       <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
-   <wvobject fp_name="/MonPro_tb/dut/a_bit_reg__0" type="array">
-      <obj_property name="ElementShortName">a_bit_reg__0[6:0]</obj_property>
-      <obj_property name="ObjectShortName">a_bit_reg__0[6:0]</obj_property>
-      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   <wvobject fp_name="/MonPro_tb/dut/a_bit" type="array">
+      <obj_property name="ElementShortName">a_bit[6:0]</obj_property>
+      <obj_property name="ObjectShortName">a_bit[6:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/MonPro_tb/dut/a_test" type="array">
+      <obj_property name="ElementShortName">a_test[127:0]</obj_property>
+      <obj_property name="ObjectShortName">a_test[127:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/MonPro_tb/MP_done" type="logic">
+      <obj_property name="ElementShortName">MP_done</obj_property>
+      <obj_property name="ObjectShortName">MP_done</obj_property>
+   </wvobject>
+   <wvobject fp_name="/MonPro_tb/MP_done_test" type="logic">
+      <obj_property name="ElementShortName">MP_done_test</obj_property>
+      <obj_property name="ObjectShortName">MP_done_test</obj_property>
    </wvobject>
 </wave_config>

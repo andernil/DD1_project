@@ -3,28 +3,27 @@
     with args -log MonPro.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source MonPro.tcl
 
 
-****** Vivado v2017.2.1 (64-bit)
-  **** SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
-  **** IP Build 1948039 on Wed Aug  9 18:19:28 MDT 2017
+****** Vivado v2017.3 (64-bit)
+  **** SW Build 2018833 on Wed Oct  4 19:58:22 MDT 2017
+  **** IP Build 2016188 on Wed Oct  4 21:52:56 MDT 2017
     ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 
 source MonPro.tcl -notrace
 Command: synth_design -top MonPro -part xc7z020clg484-1
 Starting synth_design
-Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020-clg484'
-INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020-clg484'
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 2784 
+INFO: Helper process launched with PID 3984 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 296.664 ; gain = 68.281
+Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 333.113 ; gain = 93.977
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'MonPro' [C:/Users/Torgeir Leithe/Google Drive/stor-skole/TFE4141 Design av digitale system 1/RSA/MonPro/MonPro/MonPro.srcs/sources_1/new/MonPro.vhd:88]
-INFO: [Synth 8-638] synthesizing module 'MonPro_loop' [C:/Users/Torgeir Leithe/Google Drive/stor-skole/TFE4141 Design av digitale system 1/RSA/MonPro/MonPro/MonPro.srcs/sources_1/new/MonPro.vhd:38]
-INFO: [Synth 8-256] done synthesizing module 'MonPro_loop' (1#1) [C:/Users/Torgeir Leithe/Google Drive/stor-skole/TFE4141 Design av digitale system 1/RSA/MonPro/MonPro/MonPro.srcs/sources_1/new/MonPro.vhd:38]
-WARNING: [Synth 8-614] signal 'n_in' is read in the process but is not in the sensitivity list [C:/Users/Torgeir Leithe/Google Drive/stor-skole/TFE4141 Design av digitale system 1/RSA/MonPro/MonPro/MonPro.srcs/sources_1/new/MonPro.vhd:133]
-INFO: [Synth 8-256] done synthesizing module 'MonPro' (2#1) [C:/Users/Torgeir Leithe/Google Drive/stor-skole/TFE4141 Design av digitale system 1/RSA/MonPro/MonPro/MonPro.srcs/sources_1/new/MonPro.vhd:88]
+INFO: [Synth 8-638] synthesizing module 'MonPro' [C:/git/DD1_project/VHDL-code/MonPro/MonPro.srcs/sources_1/new/MonPro.vhd:89]
+INFO: [Synth 8-638] synthesizing module 'MonPro_loop' [C:/git/DD1_project/VHDL-code/MonPro/MonPro.srcs/sources_1/new/MonPro.vhd:39]
+INFO: [Synth 8-256] done synthesizing module 'MonPro_loop' (1#1) [C:/git/DD1_project/VHDL-code/MonPro/MonPro.srcs/sources_1/new/MonPro.vhd:39]
+INFO: [Synth 8-256] done synthesizing module 'MonPro' (2#1) [C:/git/DD1_project/VHDL-code/MonPro/MonPro.srcs/sources_1/new/MonPro.vhd:89]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 336.742 ; gain = 108.359
+Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 374.191 ; gain = 135.055
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -34,40 +33,40 @@ Report Check Netlist:
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 336.742 ; gain = 108.359
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 374.191 ; gain = 135.055
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7z020clg484-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [C:/Users/Torgeir Leithe/Google Drive/stor-skole/TFE4141 Design av digitale system 1/RSA/MonPro/MonPro/MonPro.srcs/constrs_1/new/MonPro_constraints.xdc]
-Finished Parsing XDC File [C:/Users/Torgeir Leithe/Google Drive/stor-skole/TFE4141 Design av digitale system 1/RSA/MonPro/MonPro/MonPro.srcs/constrs_1/new/MonPro_constraints.xdc]
+Parsing XDC File [C:/git/DD1_project/VHDL-code/MonPro/MonPro.srcs/constrs_1/new/MonPro_constraints.xdc]
+Finished Parsing XDC File [C:/git/DD1_project/VHDL-code/MonPro/MonPro.srcs/constrs_1/new/MonPro_constraints.xdc]
 Completed Processing XDC Constraints
 
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 664.188 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 712.789 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 664.188 ; gain = 435.805
+Finished Constraint Validation : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 712.789 ; gain = 473.652
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg484-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 664.188 ; gain = 435.805
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 712.789 ; gain = 473.652
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 664.188 ; gain = 435.805
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 712.789 ; gain = 473.652
 ---------------------------------------------------------------------------------
-WARNING: [Synth 8-6014] Unused sequential element a_bit_reg was removed.  [C:/Users/Torgeir Leithe/Google Drive/stor-skole/TFE4141 Design av digitale system 1/RSA/MonPro/MonPro/MonPro.srcs/sources_1/new/MonPro.vhd:129]
+WARNING: [Synth 8-6014] Unused sequential element a_bit_reg was removed.  [C:/git/DD1_project/VHDL-code/MonPro/MonPro.srcs/sources_1/new/MonPro.vhd:103]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 664.188 ; gain = 435.805
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 712.789 ; gain = 473.652
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -84,8 +83,9 @@ Detailed RTL Component Info :
 	   3 Input    128 Bit       Adders := 1     
 	   2 Input      7 Bit       Adders := 1     
 +---Registers : 
-	              128 Bit    Registers := 1     
+	              128 Bit    Registers := 2     
 	                7 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
 +---Muxes : 
 	   2 Input    128 Bit        Muxes := 3     
 ---------------------------------------------------------------------------------
@@ -101,8 +101,9 @@ Detailed RTL Component Info :
 	   3 Input    128 Bit       Adders := 1     
 	   2 Input      7 Bit       Adders := 1     
 +---Registers : 
-	              128 Bit    Registers := 1     
+	              128 Bit    Registers := 2     
 	                7 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
 +---Muxes : 
 	   2 Input    128 Bit        Muxes := 1     
 Module MonPro_loop 
@@ -126,9 +127,9 @@ Finished Part Resource Summary
 ---------------------------------------------------------------------------------
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
-WARNING: [Synth 8-6014] Unused sequential element a_bit_reg was removed.  [C:/Users/Torgeir Leithe/Google Drive/stor-skole/TFE4141 Design av digitale system 1/RSA/MonPro/MonPro/MonPro.srcs/sources_1/new/MonPro.vhd:129]
+WARNING: [Synth 8-6014] Unused sequential element a_bit_reg was removed.  [C:/git/DD1_project/VHDL-code/MonPro/MonPro.srcs/sources_1/new/MonPro.vhd:103]
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 664.188 ; gain = 435.805
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:26 ; elapsed = 00:00:26 . Memory (MB): peak = 712.789 ; gain = 473.652
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -140,13 +141,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:29 ; elapsed = 00:00:29 . Memory (MB): peak = 664.188 ; gain = 435.805
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:37 ; elapsed = 00:00:38 . Memory (MB): peak = 712.789 ; gain = 473.652
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 688.938 ; gain = 460.555
+Finished Timing Optimization : Time (s): cpu = 00:00:40 ; elapsed = 00:00:41 . Memory (MB): peak = 761.164 ; gain = 522.027
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -158,7 +159,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:31 ; elapsed = 00:00:31 . Memory (MB): peak = 688.938 ; gain = 460.555
+Finished Technology Mapping : Time (s): cpu = 00:00:40 ; elapsed = 00:00:41 . Memory (MB): peak = 761.164 ; gain = 522.027
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -182,7 +183,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:31 ; elapsed = 00:00:32 . Memory (MB): peak = 688.938 ; gain = 460.555
+Finished IO Insertion : Time (s): cpu = 00:00:41 ; elapsed = 00:00:42 . Memory (MB): peak = 761.164 ; gain = 522.027
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -195,7 +196,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:32 ; elapsed = 00:00:32 . Memory (MB): peak = 688.938 ; gain = 460.555
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:41 ; elapsed = 00:00:42 . Memory (MB): peak = 761.164 ; gain = 522.027
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -207,25 +208,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:32 ; elapsed = 00:00:32 . Memory (MB): peak = 688.938 ; gain = 460.555
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:42 ; elapsed = 00:00:42 . Memory (MB): peak = 761.164 ; gain = 522.027
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:32 ; elapsed = 00:00:32 . Memory (MB): peak = 688.938 ; gain = 460.555
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:42 ; elapsed = 00:00:42 . Memory (MB): peak = 761.164 ; gain = 522.027
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:32 ; elapsed = 00:00:32 . Memory (MB): peak = 688.938 ; gain = 460.555
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:42 ; elapsed = 00:00:42 . Memory (MB): peak = 761.164 ; gain = 522.027
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:32 ; elapsed = 00:00:32 . Memory (MB): peak = 688.938 ; gain = 460.555
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:42 ; elapsed = 00:00:42 . Memory (MB): peak = 761.164 ; gain = 522.027
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -242,44 +243,47 @@ Report Cell Usage:
 |      |Cell   |Count |
 +------+-------+------+
 |1     |BUFG   |     1|
-|2     |CARRY4 |   130|
+|2     |CARRY4 |   131|
 |3     |LUT1   |     2|
-|4     |LUT2   |   131|
-|5     |LUT3   |   384|
-|6     |LUT4   |   153|
-|7     |LUT5   |   131|
-|8     |LUT6   |    48|
+|4     |LUT2   |   132|
+|5     |LUT3   |   394|
+|6     |LUT4   |   255|
+|7     |LUT5   |     1|
+|8     |LUT6   |   165|
 |9     |MUXF7  |    17|
 |10    |MUXF8  |     8|
-|11    |FDRE   |   135|
-|12    |IBUF   |   386|
-|13    |OBUF   |   129|
+|11    |FDCE   |   128|
+|12    |FDRE   |   136|
+|13    |IBUF   |   386|
+|14    |OBUF   |   129|
 +------+-------+------+
 
 Report Instance Areas: 
 +------+--------------+------------+------+
 |      |Instance      |Module      |Cells |
 +------+--------------+------------+------+
-|1     |top           |            |  1655|
+|1     |top           |            |  1885|
 |2     |  loopti_loop |MonPro_loop |   381|
 +------+--------------+------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:32 ; elapsed = 00:00:32 . Memory (MB): peak = 688.938 ; gain = 460.555
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:42 ; elapsed = 00:00:42 . Memory (MB): peak = 761.164 ; gain = 522.027
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 2 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:21 ; elapsed = 00:00:25 . Memory (MB): peak = 688.938 ; gain = 133.109
-Synthesis Optimization Complete : Time (s): cpu = 00:00:32 ; elapsed = 00:00:32 . Memory (MB): peak = 688.938 ; gain = 460.555
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:27 ; elapsed = 00:00:36 . Memory (MB): peak = 761.164 ; gain = 183.430
+Synthesis Optimization Complete : Time (s): cpu = 00:00:42 ; elapsed = 00:00:42 . Memory (MB): peak = 761.164 ; gain = 522.027
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 516 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 542 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-14 Infos, 3 Warnings, 0 Critical Warnings and 0 Errors encountered.
+INFO: [Common 17-83] Releasing license: Synthesis
+15 Infos, 2 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:34 ; elapsed = 00:00:35 . Memory (MB): peak = 688.938 ; gain = 468.992
-INFO: [Common 17-1381] The checkpoint 'C:/Users/Torgeir Leithe/Google Drive/stor-skole/TFE4141 Design av digitale system 1/RSA/MonPro/MonPro/MonPro.runs/synth_2/MonPro.dcp' has been generated.
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.039 . Memory (MB): peak = 688.938 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Sat Oct 21 20:29:27 2017...
+synth_design: Time (s): cpu = 00:00:43 ; elapsed = 00:00:44 . Memory (MB): peak = 761.164 ; gain = 523.934
+INFO: [Common 17-1381] The checkpoint 'C:/git/DD1_project/VHDL-code/MonPro/MonPro.runs/synth_2/MonPro.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file MonPro_utilization_synth.rpt -pb MonPro_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.059 . Memory (MB): peak = 761.164 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Wed Oct 25 16:33:02 2017...

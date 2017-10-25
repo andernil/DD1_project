@@ -104,13 +104,15 @@ begin
     end if;
   end process;
   
-  process(n_in,a_test,a_bit) 
+  process(n_in,a_test,a_bit,clk) 
   begin
-    if(unsigned(a_test) > unsigned(n_in) or (unsigned(a_bit) > "01111111")) then
+    if (clk'event and clk = '1') then
+    if(unsigned(a_test(127 downto 0) & '0') > unsigned(n_in) or (unsigned(a_bit) > "01111110")) then
       MP_done <= '1';
     else 
       MP_done <= '0';
     end if;
+  end if;
   end process;  
   
   

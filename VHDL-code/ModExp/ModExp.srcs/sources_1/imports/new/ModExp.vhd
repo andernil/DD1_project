@@ -69,17 +69,17 @@ architecture Behavioral of ModExp is
     signal loop_count   : STD_LOGIC_VECTOR (6 downto 0);
 begin
  
-  process (reset_n,MP_done_1) begin
+  process (reset_n,MP_done_1,clk) begin
     if (reset_n = '1') then
       MP_done_first <= '0';
-    elsif(MP_done_1'event and MP_done_1 = '1') then
+    elsif(clk'event and clk = '1' and MP_done_1 = '1') then
       MP_done_first <= '1';
     end if;
   end process;
 
-  REG_1:process(reset_n,clk,u_out_1,MP_done_1) 
+  REG_1:process(reset_n,clk,u_out_1,MP_done_1,clk) 
   begin
-    if (MP_done_1'event and MP_done_1 = '1') then
+    if (clk'event and clk = '1' and MP_done_1 = '1') then
       u_reg_1 <= u_out_1;
     end if;
   end process;
@@ -95,8 +95,19 @@ begin
       end if;
   end process;
     
-  reset_monpro <= reset_n OR MP_done_1;
-
+  --reset_monpro <= reset_n or MP_done_1;
+  process(clk, MP_done_1,reset_n,reset_monpro) begin
+    if (reset_n = '1') then
+      reset_monpro <= '1';
+    elsif(clk'event and clk = '1')then
+      if (MP_done_1 = '1' and reset_monpro = '0') then
+        reset_monpro <= '1';
+      else
+        reset_monpro <= '0';
+      end if;
+    end if;
+  end process;
+      
     MonPro_1: entity work.MonPro
     port map(
     clk => clk,
@@ -110,10 +121,10 @@ begin
     );
     
     
-  process(loop_count,reset_n,MP_done_2,MP_done_first) begin
+  process(loop_count,reset_n,MP_done_2,MP_done_first,clk) begin
    if (reset_n = '1') then
      loop_test <= (others => '0');
-    elsif (MP_done_2'event and MP_done_2 = '1' and MP_done_first = '1') then
+    elsif (clk'event and clk = '1' and (MP_done_2 = '1' and MP_done_first = '1')) then
      loop_test(to_integer(unsigned(loop_count))) <= '1';
     end if;
   end process;
@@ -127,11 +138,11 @@ begin
   end process;
   
   --ME done fiks
-  process(MP_done_2,loop_test,e_in,ME_done_int,reset_n) 
+  process(MP_done_2,loop_test,e_in,ME_done_int,reset_n,clk) 
   begin
     if(reset_n = '1') then
       ME_done_int <= "00";
-    elsif (MP_done_2'event and MP_done_2 = '1') then
+    elsif (clk'event and clk = '1' and MP_done_2 = '1') then
       if (ME_done_int = "01") then
         ME_done_int <= "11";
       elsif(unsigned(loop_test) > unsigned(e_in)) then
@@ -146,11 +157,11 @@ begin
   
   ME_done <= ME_done_int(1);
   
-  REG_2:process(reset_n,MP_done_2,u_out_2,loop_count,r_n,e_in,MP_done_first) 
+  REG_2:process(reset_n,MP_done_2,u_out_2,loop_count,r_n,e_in,MP_done_first,clk) 
   begin
       if(reset_n = '1') then
         u_reg_2 <= r_n;
-      elsif(MP_done_2'event and MP_done_2 = '1') then      
+      elsif(clk'event and clk = '1' and MP_done_2 = '1') then      
         if (MP_done_first = '1' AND e_in(to_integer(unsigned(loop_count))) = '1') then        
           u_reg_2 <= u_out_2;
         end if;
@@ -159,10 +170,10 @@ begin
 
   b_in_2 <= u_reg_2;
 
-  Loop_counting:process(MP_done_2,reset_n,loop_count) begin
+  Loop_counting:process(MP_done_2,reset_n,loop_count,clk) begin
     if(reset_n = '1') then
         loop_count <= (others => '1');
-    elsif(MP_done_2'event and MP_done_2 = '1') then
+    elsif(clk'event and clk = '1' and MP_done_2 = '1') then
         loop_count <= std_logic_vector(unsigned(loop_count) + "1");    
     end if;
   end process;

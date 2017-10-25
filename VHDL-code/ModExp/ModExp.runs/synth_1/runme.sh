@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/Users/Torgeir Leithe/Google Drive/stor-skole/TFE4141 Design av digitale system 1/RSA/Git/DD1_project/VHDL-code/ModExp/ModExp.runs/synth_1'
+HD_PWD='C:/git/DD1_project/VHDL-code/ModExp/ModExp.runs/synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7z030fbv484-1" LaunchTime="1508930084">
+<GenRun Id="synth_1" LaunchPart="xc7z030fbv484-1" LaunchTime="1508963439">
   <File Type="PA-TCL" Name="ModExp.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="ModExp_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="ModExp_reports.tcl"/>
@@ -13,7 +13,7 @@
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/imports/new/MonPro.vhd">
       <FileInfo>
-        <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../Desktop/ModExp/imports/new/MonPro.vhd"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../../Users/Torgeir Leithe/Desktop/ModExp/imports/new/MonPro.vhd"/>
         <Attr Name="ImportTime" Val="1508610397"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -21,7 +21,7 @@
     </File>
     <File Path="$PSRCDIR/sources_1/imports/new/ModExp.vhd">
       <FileInfo>
-        <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../Desktop/ModExp/imports/new/ModExp.vhd"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../../Users/Torgeir Leithe/Desktop/ModExp/imports/new/ModExp.vhd"/>
         <Attr Name="ImportTime" Val="1508626364"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>

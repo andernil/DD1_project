@@ -10,15 +10,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="6434750000fs"></ZoomStartTime>
-      <ZoomEndTime time="6537050001fs"></ZoomEndTime>
-      <Cursor1Time time="6520000000fs"></Cursor1Time>
+      <ZoomStartTime time="162485666666fs"></ZoomStartTime>
+      <ZoomEndTime time="162586866667fs"></ZoomEndTime>
+      <Cursor1Time time="162570000000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="127"></NameColumnWidth>
-      <ValueColumnWidth column_width="290"></ValueColumnWidth>
+      <NameColumnWidth column_width="142"></NameColumnWidth>
+      <ValueColumnWidth column_width="286"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="22" />
+   <WVObjectSize size="23" />
    <wvobject fp_name="/ModExp_tb/clk" type="logic">
       <obj_property name="ElementShortName">clk</obj_property>
       <obj_property name="ObjectShortName">clk</obj_property>
@@ -103,6 +103,10 @@
    <wvobject fp_name="/ModExp_tb/dut/u_reg_2" type="array">
       <obj_property name="ElementShortName">u_reg_2[127:0]</obj_property>
       <obj_property name="ObjectShortName">u_reg_2[127:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ModExp_tb/dut/reset_monpro" type="logic">
+      <obj_property name="ElementShortName">reset_monpro</obj_property>
+      <obj_property name="ObjectShortName">reset_monpro</obj_property>
    </wvobject>
    <wvobject fp_name="/ModExp_tb/dut/MP_done_first" type="logic">
       <obj_property name="ElementShortName">MP_done_first</obj_property>

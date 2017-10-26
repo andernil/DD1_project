@@ -60,7 +60,6 @@ signal r_n     : STD_LOGIC_VECTOR (127 downto 0);
 signal rr_n    : STD_LOGIC_VECTOR (127 downto 0);
 
 signal test_reg :STD_LOGIC_VECTOR (127 downto 0);
-signal M_out_test   : STD_LOGIC_VECTOR (127 downto 0);
 
 begin
 
@@ -100,8 +99,7 @@ begin
     StartRsa         => StartRsa, 
     DataIn           => DataIn, 
     DataOut          => DataOut, 
-    CoreFinished     => CoreFinished,
-    M_out_test       => M_out_test
+    CoreFinished     => CoreFinished
   );
 
   clk <= not clk after CLK_PERIOD/2;

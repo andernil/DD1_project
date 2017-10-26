@@ -1,11 +1,12 @@
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/git/DD1_project/VHDL-code/Shell/Shell.sim/sim_1/impl/func/xsim/RSACoreTestBench_func_impl.vhd" into library xil_defaultlib
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/git/DD1_project/VHDL-code/Shell/Shell.sim/sim_1/impl/func/xsim/TorgeTest_TB_func_impl.vhd" into library xil_defaultlib
 INFO: [VRFC 10-307] analyzing entity MonPro_loop
 INFO: [VRFC 10-307] analyzing entity MonPro_loop_1
 INFO: [VRFC 10-307] analyzing entity MonPro
 INFO: [VRFC 10-307] analyzing entity MonPro_0
 INFO: [VRFC 10-307] analyzing entity ModExp
 INFO: [VRFC 10-307] analyzing entity RSACore
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/git/DD1_project/VHDL-code/Shell/Shell.srcs/sim_1/imports/RSA/RSAParameters.vhd" into library xil_defaultlib
 INFO: [VRFC 10-163] Analyzing VHDL file "C:/git/DD1_project/VHDL-code/Shell/Shell.srcs/sim_1/imports/RSA/CompDecl.vhd" into library xil_defaultlib
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/git/DD1_project/VHDL-code/Shell/Shell.srcs/sim_1/new/TorgeTest.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity TorgeTest_TB
 INFO: [VRFC 10-163] Analyzing VHDL file "C:/git/DD1_project/VHDL-code/Shell/Shell.srcs/sim_1/imports/RSA/RSACoreTestBench.vhd" into library xil_defaultlib
 INFO: [VRFC 10-307] analyzing entity RSACoreTestBench

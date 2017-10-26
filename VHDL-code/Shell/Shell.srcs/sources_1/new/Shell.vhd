@@ -35,7 +35,6 @@ use IEEE.numeric_std.all;
 
 entity RSACore is
     Port ( 
- M_out_test     : out STD_LOGIC_VECTOR (127 downto 0);   
     
  DataIn         : in STD_LOGIC_VECTOR (31 downto 0);
  DataOut        : out STD_LOGIC_VECTOR (31 downto 0);
@@ -148,7 +147,7 @@ process(counter_nxt, clk, state) begin
   end if;
 end process;
 
-process(counter, clk, state) begin
+process(counter_nxt, clk, state) begin
   if (clk'event and clk = '1' and state = "10" and counter_nxt = "00100") then
     M_in  <= Data_in_reg;
   end if;
@@ -173,7 +172,6 @@ process(ME_done,clk,M_Out,Data_out_reg,out_state,resetn)begin
   end if;
 end process;
 
-M_out_test <= M_out;
 DataOut <= Data_out_reg(31 downto 0);
 
 ModExp: entity work.ModExp 

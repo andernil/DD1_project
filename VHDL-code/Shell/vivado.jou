@@ -312,3 +312,33 @@ run 163.83 us
 current_sim simulation_15
 relaunch_sim
 run 163.83 us
+launch_runs impl_1 -jobs 2
+wait_on_run impl_1
+save_wave_config {C:/git/DD1_project/VHDL-code/Shell/TorgeTest_TB_behav.wcfg}
+close_sim
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+wait_on_run synth_1
+close_design
+launch_simulation -mode post-synthesis -type functional
+open_wave_config C:/git/DD1_project/VHDL-code/Shell/Shell.srcs/sim_1/imports/Shell/RSACoreTestBench_behav.wcfg
+open_wave_config C:/git/DD1_project/VHDL-code/Shell/TorgeTest_TB_behav.wcfg
+source TorgeTest_TB.tcl
+run 163.83 us
+reset_run synth_1
+launch_runs impl_1 -jobs 2
+wait_on_run impl_1
+close_sim
+open_run impl_1
+current_design synth_1
+close_design
+launch_simulation -mode post-synthesis -type functional
+open_wave_config C:/git/DD1_project/VHDL-code/Shell/Shell.srcs/sim_1/imports/Shell/RSACoreTestBench_behav.wcfg
+open_wave_config C:/git/DD1_project/VHDL-code/Shell/TorgeTest_TB_behav.wcfg
+source TorgeTest_TB.tcl
+run 163.83 us
+launch_simulation -mode post-implementation -type functional
+open_wave_config C:/git/DD1_project/VHDL-code/Shell/Shell.srcs/sim_1/imports/Shell/RSACoreTestBench_behav.wcfg
+open_wave_config C:/git/DD1_project/VHDL-code/Shell/TorgeTest_TB_behav.wcfg
+source TorgeTest_TB.tcl
+run 163.83 us

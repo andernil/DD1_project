@@ -14,9 +14,8 @@ component RSACore is
     StartRsa         :  in std_logic;
     DataIn           :  in std_logic_vector(W_DATA-1 downto 0);
     DataOut          : out std_logic_vector(W_DATA-1 downto 0);
-    CoreFinished     : out std_logic;
-    M_out_test       : out std_logic_vector(127 downto 0)
-  );
+    CoreFinished     : out std_logic  
+    );
 end component RSACore;
 component RSACoreTestBench is
 end component RSACoreTestBench;

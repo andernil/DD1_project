@@ -12,13 +12,13 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="41583334fs"></ZoomStartTime>
-      <ZoomEndTime time="92083335fs"></ZoomEndTime>
-      <Cursor1Time time="60100000fs"></Cursor1Time>
+      <ZoomStartTime time="162836733334fs"></ZoomStartTime>
+      <ZoomEndTime time="162916933335fs"></ZoomEndTime>
+      <Cursor1Time time="162860100000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="199"></NameColumnWidth>
-      <ValueColumnWidth column_width="231"></ValueColumnWidth>
+      <ValueColumnWidth column_width="227"></ValueColumnWidth>
    </column_width_setting>
    <WVObjectSize size="25" />
    <wvobject fp_name="/TorgeTest_TB/Clk" type="logic">
@@ -54,7 +54,7 @@
    <wvobject fp_name="/TorgeTest_TB/M_out_test" type="array">
       <obj_property name="ElementShortName">M_out_test[127:0]</obj_property>
       <obj_property name="ObjectShortName">M_out_test[127:0]</obj_property>
-      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
    <wvobject fp_name="/TorgeTest_TB/test_reg" type="array">
       <obj_property name="ElementShortName">test_reg[127:0]</obj_property>

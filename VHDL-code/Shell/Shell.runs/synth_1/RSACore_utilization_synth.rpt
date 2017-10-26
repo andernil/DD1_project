@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2017.3 (win64) Build 2018833 Wed Oct  4 19:58:22 MDT 2017
-| Date         : Fri Oct 27 00:32:49 2017
+| Date         : Fri Oct 27 01:01:09 2017
 | Host         : Tenke-Torgeir running 64-bit major release  (build 9200)
 | Command      : report_utilization -file RSACore_utilization_synth.rpt -pb RSACore_utilization_synth.pb
 | Design       : RSACore
@@ -87,29 +87,29 @@ Table of Contents
 4. IO and GT Specific
 ---------------------
 
-+-----------------------------+------+-------+-----------+--------+
-|          Site Type          | Used | Fixed | Available |  Util% |
-+-----------------------------+------+-------+-----------+--------+
-| Bonded IOB                  |  197 |     0 |       163 | 120.86 |
-| Bonded IPADs                |    0 |     0 |        14 |   0.00 |
-| Bonded OPADs                |    0 |     0 |         8 |   0.00 |
-| Bonded IOPADs               |    0 |     0 |       130 |   0.00 |
-| PHY_CONTROL                 |    0 |     0 |         5 |   0.00 |
-| PHASER_REF                  |    0 |     0 |         5 |   0.00 |
-| OUT_FIFO                    |    0 |     0 |        20 |   0.00 |
-| IN_FIFO                     |    0 |     0 |        20 |   0.00 |
-| IDELAYCTRL                  |    0 |     0 |         5 |   0.00 |
-| IBUFDS                      |    0 |     0 |       155 |   0.00 |
-| GTXE2_COMMON                |    0 |     0 |         1 |   0.00 |
-| GTXE2_CHANNEL               |    0 |     0 |         4 |   0.00 |
-| PHASER_OUT/PHASER_OUT_PHY   |    0 |     0 |        20 |   0.00 |
-| PHASER_IN/PHASER_IN_PHY     |    0 |     0 |        20 |   0.00 |
-| IDELAYE2/IDELAYE2_FINEDELAY |    0 |     0 |       250 |   0.00 |
-| ODELAYE2/ODELAYE2_FINEDELAY |    0 |     0 |       150 |   0.00 |
-| IBUFDS_GTE2                 |    0 |     0 |         2 |   0.00 |
-| ILOGIC                      |    0 |     0 |       163 |   0.00 |
-| OLOGIC                      |    0 |     0 |       163 |   0.00 |
-+-----------------------------+------+-------+-----------+--------+
++-----------------------------+------+-------+-----------+-------+
+|          Site Type          | Used | Fixed | Available | Util% |
++-----------------------------+------+-------+-----------+-------+
+| Bonded IOB                  |   69 |     0 |       163 | 42.33 |
+| Bonded IPADs                |    0 |     0 |        14 |  0.00 |
+| Bonded OPADs                |    0 |     0 |         8 |  0.00 |
+| Bonded IOPADs               |    0 |     0 |       130 |  0.00 |
+| PHY_CONTROL                 |    0 |     0 |         5 |  0.00 |
+| PHASER_REF                  |    0 |     0 |         5 |  0.00 |
+| OUT_FIFO                    |    0 |     0 |        20 |  0.00 |
+| IN_FIFO                     |    0 |     0 |        20 |  0.00 |
+| IDELAYCTRL                  |    0 |     0 |         5 |  0.00 |
+| IBUFDS                      |    0 |     0 |       155 |  0.00 |
+| GTXE2_COMMON                |    0 |     0 |         1 |  0.00 |
+| GTXE2_CHANNEL               |    0 |     0 |         4 |  0.00 |
+| PHASER_OUT/PHASER_OUT_PHY   |    0 |     0 |        20 |  0.00 |
+| PHASER_IN/PHASER_IN_PHY     |    0 |     0 |        20 |  0.00 |
+| IDELAYE2/IDELAYE2_FINEDELAY |    0 |     0 |       250 |  0.00 |
+| ODELAYE2/ODELAYE2_FINEDELAY |    0 |     0 |       150 |  0.00 |
+| IBUFDS_GTE2                 |    0 |     0 |         2 |  0.00 |
+| ILOGIC                      |    0 |     0 |       163 |  0.00 |
+| OLOGIC                      |    0 |     0 |       163 |  0.00 |
++-----------------------------+------+-------+-----------+-------+
 
 
 5. Clocking
@@ -160,11 +160,11 @@ Table of Contents
 | CARRY4   |  276 |          CarryLogic |
 | LUT2     |  266 |                 LUT |
 | FDCE     |  266 |        Flop & Latch |
-| OBUF     |  161 |                  IO |
 | FDPE     |  136 |        Flop & Latch |
 | LDCE     |  128 |        Flop & Latch |
 | MUXF7    |   52 |               MuxFx |
 | IBUF     |   36 |                  IO |
+| OBUF     |   33 |                  IO |
 | MUXF8    |   26 |               MuxFx |
 | LUT1     |    7 |                 LUT |
 | BUFG     |    1 |               Clock |

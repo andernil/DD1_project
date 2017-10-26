@@ -1,0 +1,4 @@
+Running: xsim.dir/TorgeTest_TB_func_synth/xsimk.exe -simmode gui -wdb TorgeTest_TB_func_synth.wdb -simrunnum 0 -socket 52435
+Design successfully loaded
+Design Loading Memory Usage: 16960 KB (Peak: 16960 KB)
+Design Loading CPU Usage: 31 ms

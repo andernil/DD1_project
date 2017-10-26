@@ -11,3 +11,216 @@
 #-----------------------------------------------------------
 start_gui
 open_project C:/git/DD1_project/VHDL-code/Shell/Shell.xpr
+launch_simulation
+open_wave_config C:/git/DD1_project/VHDL-code/Shell/RSACoreTestBench_behav.wcfg
+source RSACoreTestBench.tcl
+run 163.83 us
+relaunch_sim
+relaunch_sim
+relaunch_sim
+run 163.83 us
+run 163.83 us
+run 163.83 us
+run 163.83 us
+run 163.83 us
+run 163.83 us
+run 163.83 us
+run 163.83 us
+run 163.83 us
+run 163.83 us
+run 163.83 us
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+wait_on_run synth_1
+launch_simulation -mode post-synthesis -type functional
+open_wave_config C:/git/DD1_project/VHDL-code/Shell/RSACoreTestBench_behav.wcfg
+source RSACoreTestBench.tcl
+run 163.83 us
+run 163.83 us
+run 163.83 us
+relaunch_sim
+run 163.83 us
+save_wave_config {C:/git/DD1_project/VHDL-code/Shell/RSACoreTestBench_behav.wcfg}
+close_sim
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+wait_on_run synth_1
+close_design
+launch_simulation -mode post-synthesis -type functional
+open_wave_config C:/git/DD1_project/VHDL-code/Shell/RSACoreTestBench_behav.wcfg
+source RSACoreTestBench.tcl
+current_sim simulation_1
+relaunch_sim
+run 163.83 us
+current_sim simulation_3
+run 163.83 us
+restart
+run 163.83 us
+current_sim simulation_1
+restart
+run 163.83 us
+run 163.83 us
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+restart
+run 163.83 us
+restart
+run 163.83 us
+relaunch_sim
+run 163.83 us
+save_wave_config {C:/git/DD1_project/VHDL-code/Shell/RSACoreTestBench_behav.wcfg}
+current_sim simulation_3
+close_sim
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+wait_on_run synth_1
+close_design
+launch_simulation -mode post-synthesis -type functional
+open_wave_config C:/git/DD1_project/VHDL-code/Shell/RSACoreTestBench_behav.wcfg
+source RSACoreTestBench.tcl
+restart
+run 163.83 us
+current_sim simulation_1
+current_sim simulation_1
+relaunch_sim
+run 163.83 us
+restart
+relaunch_sim
+run 163.83 us
+current_sim simulation_4
+close_sim
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+wait_on_run synth_1
+close_design
+launch_simulation -mode post-synthesis -type functional
+open_wave_config C:/git/DD1_project/VHDL-code/Shell/RSACoreTestBench_behav.wcfg
+source RSACoreTestBench.tcl
+restart
+run 163.83 us
+launch_runs impl_1 -jobs 2
+wait_on_run impl_1
+open_run impl_1
+synth_design -rtl -name rtl_1
+reset_run synth_1
+launch_runs impl_1 -jobs 2
+wait_on_run impl_1
+current_design impl_1
+refresh_design
+launch_simulation -mode post-implementation -type functional
+open_wave_config C:/git/DD1_project/VHDL-code/Shell/RSACoreTestBench_behav.wcfg
+source RSACoreTestBench.tcl
+run 163.83 us
+run 163.83 us
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+wait_on_run synth_1
+current_design synth_1
+save_wave_config {C:/git/DD1_project/VHDL-code/Shell/RSACoreTestBench_behav.wcfg}
+current_sim simulation_5
+close_sim
+close_design
+launch_simulation -mode post-synthesis -type functional
+open_wave_config C:/git/DD1_project/VHDL-code/Shell/RSACoreTestBench_behav.wcfg
+source RSACoreTestBench.tcl
+current_sim simulation_6
+run 163.83 us
+save_wave_config {C:/git/DD1_project/VHDL-code/Shell/RSACoreTestBench_behav.wcfg}
+close_sim
+run 163.83 us
+run 163.83 us
+run 163.83 us
+run 163.83 us
+run 163.83 us
+run 163.83 us
+run 163.83 us
+run 163.83 us
+run 163.83 us
+run 163.83 us
+run 163.83 us
+current_sim simulation_7
+run 163.83 us
+run 163.83 us
+run 163.83 us
+file mkdir C:/git/DD1_project/VHDL-code/Shell/Shell.srcs/sim_1/new
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+close [ open C:/git/DD1_project/VHDL-code/Shell/Shell.srcs/sim_1/new/TorgeTest.vhd w ]
+add_files -fileset sim_1 C:/git/DD1_project/VHDL-code/Shell/Shell.srcs/sim_1/new/TorgeTest.vhd
+reorder_files -fileset sim_1 -before C:/git/DD1_project/VHDL-code/Shell/Shell.srcs/sim_1/imports/RSA/RSAParameters.vhd C:/git/DD1_project/VHDL-code/Shell/Shell.srcs/sim_1/new/TorgeTest.vhd
+reorder_files -fileset sim_1 -before C:/git/DD1_project/VHDL-code/Shell/Shell.srcs/sim_1/new/TorgeTest.vhd C:/git/DD1_project/VHDL-code/Shell/Shell.srcs/sim_1/imports/RSA/CompDecl.vhd
+current_sim simulation_1
+relaunch_sim
+relaunch_sim
+save_wave_config {C:/git/DD1_project/VHDL-code/Shell/RSACoreTestBench_behav.wcfg}
+close_sim
+launch_simulation
+open_wave_config C:/git/DD1_project/VHDL-code/Shell/RSACoreTestBench_behav.wcfg
+source RSACoreTestBench.tcl
+set_property is_enabled false [get_files  C:/git/DD1_project/VHDL-code/Shell/Shell.srcs/sim_1/imports/RSA/RSACoreTestBench.vhd]
+relaunch_sim
+close_sim
+save_wave_config {C:/git/DD1_project/VHDL-code/Shell/RSACoreTestBench_behav.wcfg}
+close_sim
+launch_simulation
+open_wave_config C:/git/DD1_project/VHDL-code/Shell/RSACoreTestBench_behav.wcfg
+source RSACoreTestBench.tcl
+close_sim
+close_design
+close_design
+close_design
+set_property is_enabled true [get_files  C:/git/DD1_project/VHDL-code/Shell/Shell.srcs/sim_1/imports/RSA/RSACoreTestBench.vhd]
+set_property top TorgeTest [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+config_ip_cache -import_from_project -use_cache_location {{C:/Users/Torgeir Leithe/Google Drive/stor-skole/TFE4141 Design av digitale system 1/RSA/Git/DD1_project/VHDL-code/Shell/Shell.cache/ip}}
+update_ip_catalog
+config_ip_cache -import_from_project -use_cache_location {{C:/Users/Torgeir Leithe/Google Drive/stor-skole/TFE4141 Design av digitale system 1/RSA/Git/DD1_project/VHDL-code/Shell/Shell.cache/ip}}
+update_ip_catalog
+launch_simulation
+reorder_files -auto -disable_unused
+import_files
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top TorgeTest_TB [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode None [current_project]
+launch_simulation
+open_wave_config C:/git/DD1_project/VHDL-code/Shell/Shell.srcs/sim_1/imports/Shell/RSACoreTestBench_behav.wcfg
+source TorgeTest_TB.tcl
+restart
+run 163.83 us
+restart
+run 163.83 us
+close_sim
+launch_simulation
+open_wave_config C:/git/DD1_project/VHDL-code/Shell/Shell.srcs/sim_1/imports/Shell/RSACoreTestBench_behav.wcfg
+source TorgeTest_TB.tcl
+relaunch_sim
+run 163.83 us
+restart
+run 163.83 us
+save_wave_config {C:/git/DD1_project/VHDL-code/Shell/TorgeTest_TB_behav.wcfg}
+add_files -fileset sim_1 -norecurse C:/git/DD1_project/VHDL-code/Shell/TorgeTest_TB_behav.wcfg
+set_property xsim.view {C:/git/DD1_project/VHDL-code/Shell/RSACoreTestBench_behav.wcfg C:/git/DD1_project/VHDL-code/Shell/TorgeTest_TB_behav.wcfg} [get_filesets sim_1]
+restart
+run 163.83 us
+relaunch_sim
+run 163.83 us
+relaunch_sim
+run 163.83 us
+restart
+run 163.83 us
+relaunch_sim
+run 163.83 us
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+wait_on_run synth_1
+launch_simulation -mode post-synthesis -type functional
+open_wave_config C:/git/DD1_project/VHDL-code/Shell/Shell.srcs/sim_1/imports/Shell/RSACoreTestBench_behav.wcfg
+open_wave_config C:/git/DD1_project/VHDL-code/Shell/TorgeTest_TB_behav.wcfg
+source TorgeTest_TB.tcl

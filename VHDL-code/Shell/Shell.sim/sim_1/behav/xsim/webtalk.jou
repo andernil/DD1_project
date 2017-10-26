@@ -2,11 +2,11 @@
 # Webtalk v2017.3 (64-bit)
 # SW Build 2018833 on Wed Oct  4 19:58:22 MDT 2017
 # IP Build 2016188 on Wed Oct  4 21:52:56 MDT 2017
-# Start of session at: Wed Oct 25 10:35:56 2017
-# Process ID: 972
-# Current directory: C:/Users/Torgeir Leithe/Google Drive/stor-skole/TFE4141 Design av digitale system 1/RSA/Git/DD1_project/VHDL-code/Shell/Shell.sim/sim_1/behav/xsim
-# Command line: wbtcv.exe -mode batch -source C:/Users/Torgeir Leithe/Google Drive/stor-skole/TFE4141 Design av digitale system 1/RSA/Git/DD1_project/VHDL-code/Shell/Shell.sim/sim_1/behav/xsim/xsim.dir/RSACoreTestBench_behav/webtalk/xsim_webtalk.tcl -notrace
-# Log file: C:/Users/Torgeir Leithe/Google Drive/stor-skole/TFE4141 Design av digitale system 1/RSA/Git/DD1_project/VHDL-code/Shell/Shell.sim/sim_1/behav/xsim/webtalk.log
-# Journal file: C:/Users/Torgeir Leithe/Google Drive/stor-skole/TFE4141 Design av digitale system 1/RSA/Git/DD1_project/VHDL-code/Shell/Shell.sim/sim_1/behav/xsim\webtalk.jou
+# Start of session at: Thu Oct 26 21:28:13 2017
+# Process ID: 8020
+# Current directory: C:/git/DD1_project/VHDL-code/Shell/Shell.sim/sim_1/behav/xsim
+# Command line: wbtcv.exe -mode batch -source C:/git/DD1_project/VHDL-code/Shell/Shell.sim/sim_1/behav/xsim/xsim.dir/TorgeTest_TB_behav/webtalk/xsim_webtalk.tcl -notrace
+# Log file: C:/git/DD1_project/VHDL-code/Shell/Shell.sim/sim_1/behav/xsim/webtalk.log
+# Journal file: C:/git/DD1_project/VHDL-code/Shell/Shell.sim/sim_1/behav/xsim\webtalk.jou
 #-----------------------------------------------------------
-source C:/Users/Torgeir -notrace
+source C:/git/DD1_project/VHDL-code/Shell/Shell.sim/sim_1/behav/xsim/xsim.dir/TorgeTest_TB_behav/webtalk/xsim_webtalk.tcl -notrace

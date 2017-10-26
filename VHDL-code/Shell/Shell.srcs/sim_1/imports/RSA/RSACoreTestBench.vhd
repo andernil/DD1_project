@@ -7,20 +7,20 @@
 -- *****************************************************************************
 library ieee;
 use ieee.std_logic_1164.all;
-
+  
 library std;
 use std.textio.all;
-
-
+  
+  
 library work;
 use work.RSAParameters.all;
 use work.CompDecl.all;
-
+  
 entity RSACoreTestBench is
 end RSACoreTestBench;
-
+  
 architecture struct of RSACoreTestBench is
-
+  
   -- ---------------------------------------------------------------------------
   -- Signal declarations
   -- ---------------------------------------------------------------------------
@@ -44,7 +44,7 @@ architecture struct of RSACoreTestBench is
   
   constant MAXSHIFT : integer := 15;  
   signal ShiftCtr : integer range 0 to MAXSHIFT;
- 
+  
   signal NEKey       : std_logic_vector(2*W_BLOCK-1 downto 0);
   signal PlainText   : std_logic_vector(W_BLOCK-1 downto 0);
   signal CipherText  : std_logic_vector(W_BLOCK-1 downto 0);
@@ -98,7 +98,7 @@ architecture struct of RSACoreTestBench is
   end function str_to_stdvec;   
     
 begin
-
+  
   -- Generates a 50MHz Clk
   CLKGEN: process is
   begin
@@ -164,7 +164,7 @@ begin
           readline(ComFile, l);
           read(l, s32);                    
           PlainText      <= str_to_stdvec(s32);
-
+  
           -- Encrypted/decrypted data (128 bit)
           readline(ComFile, l);
           read(l, s32);                                   
@@ -184,7 +184,7 @@ begin
                   
           -- Read comment          
           readline(ComFile, l);
-
+  
           -- Execute command
           CryptoState <= e_EXECUTE;                                      
                     
@@ -281,6 +281,6 @@ begin
     CoreFinished     => CoreFinished
   );  
   
- 
+  
     
 end struct;  

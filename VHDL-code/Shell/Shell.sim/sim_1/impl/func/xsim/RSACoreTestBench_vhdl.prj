@@ -1,0 +1,9 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"RSACoreTestBench_func_impl.vhd" \
+"../../../../../Shell.srcs/sim_1/imports/RSA/RSAParameters.vhd" \
+"../../../../../Shell.srcs/sim_1/imports/RSA/CompDecl.vhd" \
+"../../../../../Shell.srcs/sim_1/imports/RSA/RSACoreTestBench.vhd" \
+
+# Do not sort compile order
+nosort

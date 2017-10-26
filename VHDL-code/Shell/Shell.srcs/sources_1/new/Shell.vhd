@@ -99,24 +99,29 @@ process(clk,state,counter,InitRSA,StartRSA) begin
   end if;
 end process;
 
-process(counter, clk) begin
+process(DataIn, clk) begin
   if (clk'event and clk = '1') then
-  if (state = "01" OR InitRSA = '1') then
-    Data_in_reg(31 downto 0) <= Data_in_reg(63 downto 32);
-    Data_in_reg(63 downto 32) <= Data_in_reg(95 downto 64);
-    Data_in_reg(95 downto 64) <= Data_in_reg(127 downto 96);
-    Data_in_reg(127 downto 96) <= DataIn;
-  elsif((state = "10" and counter < "00011") or StartRSA = '1') then 
-    Data_in_reg(31 downto 0) <= Data_in_reg(63 downto 32);
-    Data_in_reg(63 downto 32) <= Data_in_reg(95 downto 64);
-    Data_in_reg(95 downto 64) <= Data_in_reg(127 downto 96);
-    Data_in_reg(127 downto 96) <= DataIn;  
+      Data_in_reg(127 downto 96) <= DataIn;
   end if;
+end process;
+process(Data_in_reg, clk) begin
+  if (clk'event and clk = '1') then
+      Data_in_reg(95  downto 64) <= Data_in_reg(127 downto 96);
+  end if;
+end process;
+process(Data_in_reg, clk) begin
+  if (clk'event and clk = '1') then
+      Data_in_reg(63  downto 32) <= Data_in_reg(95  downto 64);
+  end if;
+end process;
+process(Data_in_reg, clk) begin
+  if (clk'event and clk = '1') then
+      Data_in_reg(31  downto 0)  <= Data_in_reg(63  downto 32);
   end if;
 end process;
 
 process(state, counter) begin
-  if((state = "10") and (counter > "00011")) then
+  if((state = "10") and (counter > "00100")) then
     reset_ME <= '0';
   elsif(state = "11") then
     reset_ME <= '0';
@@ -125,9 +130,9 @@ process(state, counter) begin
   end if;
 end process;
 
-process(counter, clk) begin
+process(counter, clk, state) begin
   if (clk'event and clk = '1' and state = "01") then
-  case counter is
+    case counter is
       when "00011" => e_in  <= Data_in_reg;
       when "00111" => n_in  <= Data_in_reg;
       when "01011" => r_n   <= Data_in_reg;
@@ -137,7 +142,12 @@ process(counter, clk) begin
   end if;
 end process;
 
-M_in <= Data_in_reg;
+process(counter, clk, state) begin
+  if (clk'event and clk = '1' and state = "10" and counter = "00011") then
+    M_in  <= Data_in_reg;
+  end if;
+end process;
+
 
 process(ME_done,clk,M_Out,Data_out_reg,out_state,resetn)begin
   if(resetn = '0') then

@@ -77,14 +77,14 @@ begin
     end if;
   end process;
 
-  REG_1:process(reset_n,clk,u_out_1,MP_done_1) 
+  REG_1:process(reset_n,clk,u_out_1,MP_done_1,clk) 
   begin
     if (clk'event and clk = '1' and MP_done_1 = '1') then
       u_reg_1 <= u_out_1;
     end if;
   end process;
   
-  Start_MUX:process(M_in,u_reg_1,MP_done_first,rr_n) 
+  Start_MUX:process(M_in,u_reg_1,MP_done_first) 
   begin
       if (MP_done_first = '1') then
         b_in_1 <= u_reg_1;

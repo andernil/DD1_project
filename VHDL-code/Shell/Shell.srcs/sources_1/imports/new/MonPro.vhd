@@ -127,7 +127,7 @@ begin
     u_temp_ut => u_int_ut,
     u_temp_in => u_int_in 
   );
-    process(u_int_in,n_in) begin
+    process(u_int_in) begin
         if (unsigned(u_int_in) > unsigned(n_in)) then
             u_out <= std_logic_vector(unsigned(u_int_in) - unsigned(n_in));
         else

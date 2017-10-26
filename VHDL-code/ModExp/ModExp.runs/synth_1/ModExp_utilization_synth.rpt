@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2017.3 (win64) Build 2018833 Wed Oct  4 19:58:22 MDT 2017
-| Date         : Wed Oct 25 22:31:46 2017
+| Date         : Wed Oct 25 23:02:45 2017
 | Host         : Tenke-Torgeir running 64-bit major release  (build 9200)
 | Command      : report_utilization -file ModExp_utilization_synth.rpt -pb ModExp_utilization_synth.pb
 | Design       : ModExp
@@ -152,7 +152,7 @@ Table of Contents
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| LUT5     |  664 |                 LUT |
+| LUT5     |  665 |                 LUT |
 | IBUF     |  642 |                  IO |
 | LUT2     |  519 |                 LUT |
 | LUT3     |  517 |                 LUT |

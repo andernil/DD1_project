@@ -84,7 +84,7 @@ begin
     end if;
   end process;
   
-  Start_MUX:process(M_in,u_reg_1,MP_done_first) 
+  Start_MUX:process(M_in,u_reg_1,MP_done_first,rr_n) 
   begin
       if (MP_done_first = '1') then
         b_in_1 <= u_reg_1;
@@ -155,7 +155,7 @@ begin
     end if;
   end process;
   
-  ME_done <= ME_done_int(1);
+  ME_done <= ME_done_int(1) OR(MP_done_2 and ME_done_int(0));
   
   REG_2:process(reset_n,MP_done_2,u_out_2,loop_count,r_n,e_in,MP_done_first,clk) 
   begin

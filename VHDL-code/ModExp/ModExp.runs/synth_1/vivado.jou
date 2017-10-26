@@ -2,8 +2,8 @@
 # Vivado v2017.3 (64-bit)
 # SW Build 2018833 on Wed Oct  4 19:58:22 MDT 2017
 # IP Build 2016188 on Wed Oct  4 21:52:56 MDT 2017
-# Start of session at: Wed Oct 25 22:30:41 2017
-# Process ID: 6512
+# Start of session at: Wed Oct 25 23:01:43 2017
+# Process ID: 10532
 # Current directory: C:/git/DD1_project/VHDL-code/ModExp/ModExp.runs/synth_1
 # Command line: vivado.exe -log ModExp.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source ModExp.tcl
 # Log file: C:/git/DD1_project/VHDL-code/ModExp/ModExp.runs/synth_1/ModExp.vds

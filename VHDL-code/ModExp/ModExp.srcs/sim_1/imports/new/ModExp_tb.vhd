@@ -38,6 +38,8 @@ end ModExp_tb;
 architecture Behavioral of ModExp_tb is
 constant CLK_PERIOD    : time := 10 ns;
 
+signal test_reg:STD_LOGIC_VECTOR (127 downto 0);
+
 signal    clk  : STD_LOGIC := '1';
 signal reset_n : STD_LOGIC;
 
@@ -97,13 +99,13 @@ M_out   => M_out
 --
 
   n_in <= x"1b27031cf42c5a5af095dd7d4739bcdd";
-  e_in <= x"df2818d6c0e2d1480580c1c8f03c3ace"; --1650cf48ace37b54008ce02db19f9f7b   (1694278819184587528995910492621800195) df2818d6c0e2d1480580c1c8f03c3ace
+  e_in <= x"1650cf48ace37b54008ce02db19f9f7b"; --1650cf48ace37b54008ce02db19f9f7b   (1694278819184587528995910492621800195) df2818d6c0e2d1480580c1c8f03c3ace
   M_in <= x"0dfdf5c41b9a74b4aeadff7dd4763fc5";
   r_n  <= x"04d8fce30bd3a5a50f6a2282b8c64323";
   rr_n <= x"0654615e12a8b2ca13f45a4b74fa7de0";
 --102030405060708090123456789
 
-  wait for 2*CLK_PERIOD;
+  wait for 2.5*CLK_PERIOD;
   reset_n <= '0';  
   
   wait for 20*CLK_PERIOD;
@@ -113,6 +115,11 @@ M_out   => M_out
 --  reset_n <= '0';  
 
   wait;
+  end process;
   
+  process(clk, ME_done, M_out) begin
+    if(clk'event and clk = '1' and ME_done = '1') then
+      test_reg <= M_out;
+    end if;
   end process;
 end Behavioral;

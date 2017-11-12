@@ -68,7 +68,7 @@ begin
 --  M_in <= conv_std_logic_vector(123,128); 
 --  r_n  <= conv_std_logic_vector(189,128);
 --  rr_n <= conv_std_logic_vector(191,128);
--- 
+-- 225
 
 --  n_in <= conv_std_logic_vector(25100099,128);
 --  e_in <= conv_std_logic_vector(3750121,128);
@@ -84,12 +84,26 @@ begin
 --  rr_n <= x"000000000000000000000B8682ED771D";
 --
 
-  n_in <= x"1b27031cf42c5a5af095dd7d4739bcdd";
-  e_in <= x"1650cf48ace37b54008ce02db19f9f7b"; --1650cf48ace37b54008ce02db19f9f7b   (1694278819184587528995910492621800195) df2818d6c0e2d1480580c1c8f03c3ace
-  M_in <= x"0dfdf5c41b9a74b4aeadff7dd4763fc5";
-  r_n  <= x"04d8fce30bd3a5a50f6a2282b8c64323";
-  rr_n <= x"0654615e12a8b2ca13f45a4b74fa7de0";
+--  n_in <= x"1b27031cf42c5a5af095dd7d4739bcdd";
+--  e_in <= x"1650cf48ace37b54008ce02db19f9f7b"; --1650cf48ace37b54008ce02db19f9f7b   (1694278819184587528995910492621800195) df2818d6c0e2d1480580c1c8f03c3ace
+--  M_in <= x"0dfdf5c41b9a74b4aeadff7dd4763fc5";
+--  r_n  <= x"04d8fce30bd3a5a50f6a2282b8c64323";
+--  rr_n <= x"0654615e12a8b2ca13f45a4b74fa7de0";
 --102030405060708090123456789
+
+--0AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA M_in
+--4F4F353B16D9B17CD307F02F393734D9 
+--01010101010101010101010101010101
+--819DC6B2574E12C3C8BC49CDD79555FD
+--00000000000000000000000000010001
+
+  M_in <= x"0AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+
+  e_in <= x"00000000000000000000000000010001";
+  n_in <= x"819DC6B2574E12C3C8BC49CDD79555FD";
+  r_n  <= x"7e62394da8b1ed3c3743b632286aaa03";
+  rr_n <= x"4F4F353B16D9B17CD307F02F393734D9";
+
 
   R: RSACore
   port map(      
@@ -109,12 +123,12 @@ begin
   Resetn <= '0';
   StartRsa <= '0';
   InitRsa <= '0';
-  wait for 1.1*CLK_PERIOD;
+  wait for CLK_PERIOD;
   Resetn <= '1';
   wait for CLK_PERIOD;
   InitRsa <= '1';
   DataIn <= e_in(31 downto 0);
-  wait for CLK_PERIOD;
+  wait for 1.1*CLK_PERIOD;
   InitRsa <= '0';
   DataIn <= e_in(63 downto 32);  
   wait for CLK_PERIOD;

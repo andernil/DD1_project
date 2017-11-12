@@ -147,7 +147,6 @@ begin
       InitRsa  <= '0';
       StartRsa <= '0';      
       
-      
       case CryptoState is
   
         -- Start the state machine

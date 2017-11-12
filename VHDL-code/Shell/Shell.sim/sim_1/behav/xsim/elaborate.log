@@ -1,6 +1,6 @@
 Vivado Simulator 2017.3
 Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2017.3/bin/unwrapped/win64.o/xelab.exe -wto 34ca5ff7945d4538a3f6dbaea213c66c --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot TorgeTest_TB_behav xil_defaultlib.TorgeTest_TB -log elaborate.log 
+Running: C:/Xilinx/Vivado/2017.3/bin/unwrapped/win64.o/xelab.exe -wto 34ca5ff7945d4538a3f6dbaea213c66c --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot RSACoreTestBench_behav xil_defaultlib.RSACoreTestBench -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
 Completed static elaboration
@@ -10,13 +10,12 @@ Time Resolution for simulation is 1ps
 Compiling package std.standard
 Compiling package std.textio
 Compiling package ieee.std_logic_1164
-Compiling package ieee.numeric_std
-Compiling package ieee.std_logic_arith
 Compiling package xil_defaultlib.rsaparameters
 Compiling package xil_defaultlib.compdecl
+Compiling package ieee.numeric_std
 Compiling architecture behavioral of entity xil_defaultlib.MonPro_loop [monpro_loop_default]
 Compiling architecture behavioral of entity xil_defaultlib.MonPro [monpro_default]
 Compiling architecture behavioral of entity xil_defaultlib.ModExp [modexp_default]
 Compiling architecture behavioral of entity xil_defaultlib.RSACore [rsacore_default]
-Compiling architecture behavioral of entity xil_defaultlib.torgetest_tb
-Built simulation snapshot TorgeTest_TB_behav
+Compiling architecture struct of entity xil_defaultlib.rsacoretestbench
+Built simulation snapshot RSACoreTestBench_behav

@@ -21,120 +21,93 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use ieee.numeric_std.all;
---use ieee.std_logic_arith.all;
 
--- bit 0 = lsb
-
+--MonPro-loop is one pass of the for loop in MonPro
 entity MonPro_loop is
     Port ( 
-           n_in    : in STD_LOGIC_VECTOR (127 downto 0);
-           a_in    : in STD_LOGIC_VECTOR (127 downto 0);
-           b_in    : in STD_LOGIC_VECTOR (127 downto 0);
-           a_bit   : in STD_LOGIC_VECTOR (7 downto 0);
-           u_temp_ut : out STD_LOGIC_VECTOR (127 downto 0);
-           u_temp_in : in STD_LOGIC_VECTOR (127 downto 0));
+   clk       : in  STD_LOGIC;
+   reset_n   : in  STD_LOGIC;
+   n_in      : in  STD_LOGIC_VECTOR (127 downto 0);
+   a_in      : in  STD_LOGIC_VECTOR (127 downto 0);
+   b_in      : in  STD_LOGIC_VECTOR (127 downto 0);
+   a_bit     : in  STD_LOGIC_VECTOR (7 downto 0);
+   u_ut      : out STD_LOGIC_VECTOR (127 downto 0));
 end MonPro_loop;
 
 architecture Behavioral of MonPro_loop is
-   signal u_int : STD_LOGIC_VECTOR (128 downto 0);
-   signal u_int2 : STD_LOGIC_VECTOR (128 downto 0);
-begin
+   signal loop_reg    : STD_LOGIC_VECTOR (128 downto 0);
+   signal loop_nxt    : STD_LOGIC_VECTOR (128 downto 0);
+begin                                                      
     
-    data_beregning: process(n_in,a_in,b_in,a_bit,u_temp_in,u_int) 
+    data_beregning: process(n_in,a_in,b_in,a_bit,loop_reg) 
+        variable u_tmp : std_logic_vector(129 downto 0);
     begin
         if (a_in(to_integer(unsigned(a_bit(6 downto 0)))) = '1') then
-            u_int <= std_logic_vector(( '0' & unsigned(u_temp_in))+ unsigned(b_in));
+            u_tmp := std_logic_vector(( '0' & unsigned(loop_reg))+ unsigned(b_in));
         else
-            u_int <= std_logic_vector( '0' & unsigned(u_temp_in));
+            u_tmp := std_logic_vector( '0' & unsigned(loop_reg));
         end if;
         
-        if (u_int(0) = '1') then
-            u_int2 <= std_logic_vector(unsigned(u_int) + unsigned(n_in));
-        else
-            u_int2 <= u_int;
+        if (u_tmp(0) = '1') then -- bit 0 = lsb
+            u_tmp := std_logic_vector(unsigned(u_tmp) +  unsigned(n_in));
         end if;
-    end process;    
+        loop_nxt <= u_tmp(129 downto 1);
+    end process;
 
-    u_temp_ut <= u_int2(128 downto 1);
+    u_reg: process(clk,reset_n,loop_nxt) begin
+      if(clk'event and clk = '1') then 
+        if(reset_n = '1') then
+          loop_reg <= (others => '0');
+        else
+          loop_reg <= loop_nxt;
+        end if;
+      end if;  
+    end process;
+    
+   process(loop_reg,n_in) 
+   variable u_ut_tmp : std_logic_vector(128 downto 0);  
+   begin
+        if (unsigned(loop_reg) > unsigned(n_in)) then
+            u_ut_tmp := std_logic_vector(unsigned(loop_reg) - unsigned(n_in));
+        else
+            u_ut_tmp := loop_reg;
+        end if;
+        u_ut <= u_ut_tmp(127 downto 0);
+    end process;
+    
 end Behavioral;
 
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use ieee.numeric_std.all;
 
-
--- Uncomment the following library declaration if using
--- arithmetic functions with Signed or Unsigned values
---use IEEE.NUMERIC_STD.ALL;
-
--- Uncomment the following library declaration if instantiating
--- any Xilinx leaf cells in this code.
---library UNISIM;
---use UNISIM.VComponents.all;
-
 entity MonPro is
     Port ( 
-           clk     : in  std_logic;
-           reset_n : in  std_logic;
-           n_in    : in STD_LOGIC_VECTOR (127 downto 0);
-           a_in    : in STD_LOGIC_VECTOR (127 downto 0);
-           b_in    : in STD_LOGIC_VECTOR (127 downto 0);
-           MP_done : out std_logic;
-           u_out   : out STD_LOGIC_VECTOR (127 downto 0));
+           clk      : in  std_logic;
+           reset_n  : in  std_logic;
+           n_in     : in STD_LOGIC_VECTOR (127 downto 0);
+           a_in1    : in STD_LOGIC_VECTOR (127 downto 0);
+           b_in1    : in STD_LOGIC_VECTOR (127 downto 0);
+           a_in2    : in STD_LOGIC_VECTOR (127 downto 0);
+           b_in2    : in STD_LOGIC_VECTOR (127 downto 0);
+           MP_done  : out std_logic;
+           u_out1   : out STD_LOGIC_VECTOR (127 downto 0);
+           u_out2   : out STD_LOGIC_VECTOR (127 downto 0));
+
 end MonPro;
 
-
--- bit 0 = lsb
 architecture Behavioral of MonPro is
-   signal u_int_ut : STD_LOGIC_VECTOR (127 downto 0);
-   signal u_int_in : STD_LOGIC_VECTOR (127 downto 0);   
+   signal u_int_ut1 : STD_LOGIC_VECTOR (127 downto 0);   
+   signal u_int_ut2 : STD_LOGIC_VECTOR (127 downto 0);
+       
    signal a_bit   : STD_LOGIC_VECTOR (7 downto 0);
-   signal a_test : STD_LOGIC_VECTOR (127 downto 0);
+   
+   shared variable n_less_than_128_bit : std_logic := '0'; --Set to 1 to allow "n" less than 128-bit (n(msb) == "0").
+                                                           --Design is smaler when only supporting n = 128 bit
 begin
 
-
 -- Find when monpro is done
-  process(a_bit) 
-  begin
-    a_test <= (others => '0');
-    a_test(to_integer(unsigned(a_bit(6 downto 0)))) <= '1';
-  end process;
-  
-  process(n_in,a_test,a_bit,clk,reset_n) 
-  begin
---    if (clk'event and clk = '1') then
-    if (reset_n = '1') then
-      MP_done <= '0';
-    elsif(unsigned(a_test(127 downto 0)) > unsigned(n_in) or (unsigned(a_bit) > "01111111")) then
-      MP_done <= '1';
-    else 
-      MP_done <= '0';
-    end if;
---  end if;
-  end process;
-  
-  
-  loopti_loop: entity work.MonPro_loop
-  port map (
-  --      reset_n        => reset_n, 
 
-    -- Data input interface           
-    n_in  => n_in, 
-    b_in  => b_in,            
-    a_in  => a_in,    
-    --           reset_n : in  std_logic;
-    a_bit => a_bit,
-    u_temp_ut => u_int_ut,
-    u_temp_in => u_int_in 
-  );
-    process(u_int_in,n_in) begin
-        if (unsigned(u_int_in) > unsigned(n_in)) then
-            u_out <= std_logic_vector(unsigned(u_int_in) - unsigned(n_in));
-        else
-            u_out <= u_int_in;
-        end if;
-    end process;
- 
   process(clk,a_bit,reset_n) begin
     if(clk'event and clk = '1') then
       if(reset_n = '1') then
@@ -144,14 +117,55 @@ begin
       end if;
     end if;
   end process;
-    
-  process(u_int_ut,reset_n,clk) begin
-    if(clk'event and clk = '1') then 
-      if(reset_n = '1') then
-        u_int_in <= (others => '0');
-      else
-       u_int_in <= u_int_ut;
-      end if;
+
+  process(n_in,a_bit,reset_n)
+    variable a_test : STD_LOGIC_VECTOR(127 downto 0);
+  begin
+   if (n_less_than_128_bit = '1') then
+   a_test := (others => '0');
+   a_test(to_integer(unsigned(a_bit(6 downto 0)))) := '1';
+   
+    if (reset_n = '1') then
+      MP_done <= '0';
+    elsif(unsigned(a_test(127 downto 0)) > unsigned(n_in) or (unsigned(a_bit) > "01111111")) then
+      MP_done <= '1';
+    else 
+      MP_done <= '0';
+    end if;
+  else
+    if (reset_n = '1') then
+      MP_done <= '0';
+    else 
+      MP_done <= a_bit(7); --is '1' if a_bit > "01111111"
     end if;  
-  end process; 
+  end if;
+  end process;
+      
+  loopti_loop1: entity work.MonPro_loop
+  port map (
+    -- Data input interface
+    clk     => clk,
+    reset_n => reset_n,           
+    n_in    => n_in, 
+    b_in    => b_in1,            
+    a_in    => a_in1,    
+    a_bit   => a_bit,
+    u_ut => u_int_ut1
+  );
+  
+  loopti_loop2: entity work.MonPro_loop
+  port map (
+    -- Data input interface 
+    clk     => clk,
+    reset_n => reset_n,         
+    n_in    => n_in, 
+    b_in    => b_in2,            
+    a_in    => a_in2,    
+    a_bit   => a_bit,
+    u_ut => u_int_ut2
+    );
+  
+  u_out1 <= u_int_ut1;
+  u_out2 <= u_int_ut2;
+
 end Behavioral;

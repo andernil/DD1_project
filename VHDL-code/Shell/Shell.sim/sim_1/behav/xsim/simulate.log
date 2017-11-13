@@ -1,5 +1,2 @@
 Vivado Simulator 2017.3
 Time resolution is 1 ps
-Failure: Finished
-Time: 1889020 ns  Iteration: 1  Process: /RSACoreTestBench/CryptoCtrl  File: C:/git/DD1_project/VHDL-code/Shell/Shell.srcs/sim_1/imports/RSAExampleTestbench/RSACoreTestBench.vhd
-$finish called at time : 1889020 ns : File "C:/git/DD1_project/VHDL-code/Shell/Shell.srcs/sim_1/imports/RSAExampleTestbench/RSACoreTestBench.vhd" Line 271

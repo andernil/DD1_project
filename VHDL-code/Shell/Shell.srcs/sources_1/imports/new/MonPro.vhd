@@ -39,19 +39,24 @@ architecture Behavioral of MonPro_loop is
    signal loop_nxt    : STD_LOGIC_VECTOR (128 downto 0);
 begin                                                      
     
+    
+--This is very ugly, but hella fast, and any atemt to improve it, makes it slower.    
     data_beregning: process(n_in,a_in,b_in,a_bit,loop_reg) 
-        variable u_tmp : std_logic_vector(129 downto 0);
+    variable u_tmp : std_logic_vector(129 downto 0);
     begin
-        if (a_in(to_integer(unsigned(a_bit(6 downto 0)))) = '1') then
-            u_tmp := std_logic_vector(( '0' & unsigned(loop_reg))+ unsigned(b_in));
-        else
-            u_tmp := std_logic_vector( '0' & unsigned(loop_reg));
-        end if;
-        
-        if (u_tmp(0) = '1') then -- bit 0 = lsb
-            u_tmp := std_logic_vector(unsigned(u_tmp) +  unsigned(n_in));
-        end if;
-        loop_nxt <= u_tmp(129 downto 1);
+    if (((a_in(to_integer(unsigned(a_bit(6 downto 0))))  = '1') AND (b_in(0) = '1')) XOR (loop_reg(0) = '1')) then  
+      if(a_in(to_integer(unsigned(a_bit(6 downto 0))))  = '1') then
+        u_tmp := std_logic_vector(( '0' & unsigned(loop_reg))+ unsigned(b_in) + unsigned(n_in));
+      else
+        u_tmp := std_logic_vector(( '0' & unsigned(loop_reg))+ unsigned(n_in));
+      end if;
+    elsif(a_in(to_integer(unsigned(a_bit(6 downto 0))))  = '1') then
+        u_tmp := std_logic_vector(unsigned(b_in) + unsigned('0' & loop_reg));
+    else
+        u_tmp := '0' & loop_reg;
+    end if;
+    
+    loop_nxt <= u_tmp(129 downto 1);
     end process;
 
     u_reg: process(clk,reset_n,loop_nxt) begin

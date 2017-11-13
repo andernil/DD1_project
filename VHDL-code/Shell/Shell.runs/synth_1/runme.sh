@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/git/DD1_project/VHDL-code/Shell/Shell.runs/synth_1'
+HD_PWD='C:/git/NY_RSA/DD1_project/VHDL-code/Shell/Shell.runs/synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

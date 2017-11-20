@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="RSACoreTestBench_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="RSACoreTestBench" />
+            <top_module name="compdecl" />
+            <top_module name="rsaparameters" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="322523333333fs"></ZoomStartTime>
+      <ZoomEndTime time="336963333334fs"></ZoomEndTime>
+      <Cursor1Time time="339140000000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="146"></NameColumnWidth>
+      <ValueColumnWidth column_width="291"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="29" />
+   <wvobject fp_name="/RSACoreTestBench/Clk" type="logic">
+      <obj_property name="ElementShortName">Clk</obj_property>
+      <obj_property name="ObjectShortName">Clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/RSACoreTestBench/Resetn" type="logic">
+      <obj_property name="ElementShortName">Resetn</obj_property>
+      <obj_property name="ObjectShortName">Resetn</obj_property>
+   </wvobject>
+   <wvobject fp_name="/RSACoreTestBench/InitRsa" type="logic">
+      <obj_property name="ElementShortName">InitRsa</obj_property>
+      <obj_property name="ObjectShortName">InitRsa</obj_property>
+   </wvobject>
+   <wvobject fp_name="/RSACoreTestBench/StartRsa" type="logic">
+      <obj_property name="ElementShortName">StartRsa</obj_property>
+      <obj_property name="ObjectShortName">StartRsa</obj_property>
+   </wvobject>
+   <wvobject fp_name="/RSACoreTestBench/CoreFinished" type="logic">
+      <obj_property name="ElementShortName">CoreFinished</obj_property>
+      <obj_property name="ObjectShortName">CoreFinished</obj_property>
+   </wvobject>
+   <wvobject fp_name="/RSACoreTestBench/CryptoState" type="other">
+      <obj_property name="ElementShortName">CryptoState</obj_property>
+      <obj_property name="ObjectShortName">CryptoState</obj_property>
+   </wvobject>
+   <wvobject fp_name="/RSACoreTestBench/Result" type="array">
+      <obj_property name="ElementShortName">Result[127:0]</obj_property>
+      <obj_property name="ObjectShortName">Result[127:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/RSACoreTestBench/R/ModExp/ME_done_int" type="array">
+      <obj_property name="ElementShortName">ME_done_int[1:0]</obj_property>
+      <obj_property name="ObjectShortName">ME_done_int[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/RSACoreTestBench/DataOut" type="array">
+      <obj_property name="ElementShortName">DataOut[31:0]</obj_property>
+      <obj_property name="ObjectShortName">DataOut[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/RSACoreTestBench/R/Data_out_reg" type="array">
+      <obj_property name="ElementShortName">Data_out_reg[127:0]</obj_property>
+      <obj_property name="ObjectShortName">Data_out_reg[127:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/RSACoreTestBench/R/ModExp/M_out" type="array">
+      <obj_property name="ElementShortName">M_out[127:0]</obj_property>
+      <obj_property name="ObjectShortName">M_out[127:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/RSACoreTestBench/R/reset_ME" type="logic">
+      <obj_property name="ElementShortName">reset_ME</obj_property>
+      <obj_property name="ObjectShortName">reset_ME</obj_property>
+   </wvobject>
+   <wvobject fp_name="/RSACoreTestBench/R/ModExp/MP_done_1" type="logic">
+      <obj_property name="ElementShortName">MP_done_1</obj_property>
+      <obj_property name="ObjectShortName">MP_done_1</obj_property>
+   </wvobject>
+   <wvobject fp_name="/RSACoreTestBench/R/ModExp/a_in_2" type="array">
+      <obj_property name="ElementShortName">a_in_2[127:0]</obj_property>
+      <obj_property name="ObjectShortName">a_in_2[127:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/RSACoreTestBench/R/ModExp/b_in_2" type="array">
+      <obj_property name="ElementShortName">b_in_2[127:0]</obj_property>
+      <obj_property name="ObjectShortName">b_in_2[127:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/RSACoreTestBench/R/ModExp/u_out_1" type="array">
+      <obj_property name="ElementShortName">u_out_1[127:0]</obj_property>
+      <obj_property name="ObjectShortName">u_out_1[127:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/RSACoreTestBench/R/ModExp/MonPro_1/u_int_ut" type="array">
+      <obj_property name="ElementShortName">u_int_ut[128:0]</obj_property>
+      <obj_property name="ObjectShortName">u_int_ut[128:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/RSACoreTestBench/R/ModExp/u_reg_1" type="array">
+      <obj_property name="ElementShortName">u_reg_1[127:0]</obj_property>
+      <obj_property name="ObjectShortName">u_reg_1[127:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/RSACoreTestBench/R/ModExp/u_out_2" type="array">
+      <obj_property name="ElementShortName">u_out_2[127:0]</obj_property>
+      <obj_property name="ObjectShortName">u_out_2[127:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/RSACoreTestBench/R/ModExp/u_reg_2" type="array">
+      <obj_property name="ElementShortName">u_reg_2[127:0]</obj_property>
+      <obj_property name="ObjectShortName">u_reg_2[127:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/RSACoreTestBench/R/ModExp/loop_test" type="array">
+      <obj_property name="ElementShortName">loop_test[127:0]</obj_property>
+      <obj_property name="ObjectShortName">loop_test[127:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/RSACoreTestBench/R/ModExp/loop_count" type="array">
+      <obj_property name="ElementShortName">loop_count[6:0]</obj_property>
+      <obj_property name="ObjectShortName">loop_count[6:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/RSACoreTestBench/DataIn" type="array">
+      <obj_property name="ElementShortName">DataIn[31:0]</obj_property>
+      <obj_property name="ObjectShortName">DataIn[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/RSACoreTestBench/R/Data_in_reg" type="array">
+      <obj_property name="ElementShortName">Data_in_reg[127:0]</obj_property>
+      <obj_property name="ObjectShortName">Data_in_reg[127:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/RSACoreTestBench/R/state" type="array">
+      <obj_property name="ElementShortName">state[1:0]</obj_property>
+      <obj_property name="ObjectShortName">state[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/RSACoreTestBench/R/M_in" type="array">
+      <obj_property name="ElementShortName">M_in[127:0]</obj_property>
+      <obj_property name="ObjectShortName">M_in[127:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/RSACoreTestBench/R/e_in" type="array">
+      <obj_property name="ElementShortName">e_in[127:0]</obj_property>
+      <obj_property name="ObjectShortName">e_in[127:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/RSACoreTestBench/R/n_in" type="array">
+      <obj_property name="ElementShortName">n_in[127:0]</obj_property>
+      <obj_property name="ObjectShortName">n_in[127:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/RSACoreTestBench/R/rr_n" type="array">
+      <obj_property name="ElementShortName">rr_n[127:0]</obj_property>
+      <obj_property name="ObjectShortName">rr_n[127:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+</wave_config>

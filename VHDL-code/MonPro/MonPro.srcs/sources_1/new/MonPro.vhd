@@ -1,4 +1,3 @@
---monpro test build
 ----------------------------------------------------------------------------------
 -- Company: 
 -- Engineer: 
@@ -31,7 +30,7 @@ entity MonPro_loop is
            n_in    : in STD_LOGIC_VECTOR (127 downto 0);
            a_in    : in STD_LOGIC_VECTOR (127 downto 0);
            b_in    : in STD_LOGIC_VECTOR (127 downto 0);
-           a_bit   : in STD_LOGIC_VECTOR (6 downto 0);
+           a_bit   : in STD_LOGIC_VECTOR (7 downto 0);
            u_temp_ut : out STD_LOGIC_VECTOR (127 downto 0);
            u_temp_in : in STD_LOGIC_VECTOR (127 downto 0));
 end MonPro_loop;
@@ -89,29 +88,30 @@ end MonPro;
 architecture Behavioral of MonPro is
    signal u_int_ut : STD_LOGIC_VECTOR (127 downto 0);
    signal u_int_in : STD_LOGIC_VECTOR (127 downto 0);   
-   signal a_bit   : STD_LOGIC_VECTOR (6 downto 0);
+   signal a_bit   : STD_LOGIC_VECTOR (7 downto 0);
    signal a_test : STD_LOGIC_VECTOR (127 downto 0);
 begin
 
 
 -- Find when monpro is done
-  process(a_bit,reset_n,clk) 
+  process(a_bit) 
   begin
-    if (reset_n = '1') then
-      a_test <= (others => '0');
-    elsif (clk'event and clk = '1') then
-      a_test(to_integer(unsigned(a_bit(6 downto 0)))) <= '1';
-    end if;
+    a_test <= (others => '0');
+    a_test(to_integer(unsigned(a_bit(6 downto 0)))) <= '1';
   end process;
   
-  process(n_in,a_test) 
+  process(n_in,a_test,a_bit,clk,reset_n) 
   begin
-    if(unsigned(a_test) > unsigned(n_in)) then
+--    if (clk'event and clk = '1') then
+    if (reset_n = '1') then
+      MP_done <= '0';
+    elsif(unsigned(a_test(127 downto 0)) > unsigned(n_in) or (unsigned(a_bit) > "01111111")) then
       MP_done <= '1';
     else 
       MP_done <= '0';
     end if;
-  end process;  
+--  end if;
+  end process;
   
   
   loopti_loop: entity work.MonPro_loop
@@ -136,7 +136,6 @@ begin
     end process;
  
   process(clk,a_bit,reset_n) begin
-
     if(clk'event and clk = '1') then
       if(reset_n = '1') then
         a_bit <= (others => '0');

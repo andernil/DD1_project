@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Webtalk v2017.3 (64-bit)
+# SW Build 2018833 on Wed Oct  4 19:58:22 MDT 2017
+# IP Build 2016188 on Wed Oct  4 21:52:56 MDT 2017
+# Start of session at: Wed Oct 25 13:18:19 2017
+# Process ID: 5668
+# Current directory: C:/Users/Torgeir Leithe/Google Drive/stor-skole/TFE4141 Design av digitale system 1/RSA/Git/DD1_project/VHDL-code/ModExp/ModExp.sim/sim_1/behav/xsim
+# Command line: wbtcv.exe -mode batch -source C:/Users/Torgeir Leithe/Google Drive/stor-skole/TFE4141 Design av digitale system 1/RSA/Git/DD1_project/VHDL-code/ModExp/ModExp.sim/sim_1/behav/xsim/xsim.dir/ModExp_tb_behav/webtalk/xsim_webtalk.tcl -notrace
+# Log file: C:/Users/Torgeir Leithe/Google Drive/stor-skole/TFE4141 Design av digitale system 1/RSA/Git/DD1_project/VHDL-code/ModExp/ModExp.sim/sim_1/behav/xsim/webtalk.log
+# Journal file: C:/Users/Torgeir Leithe/Google Drive/stor-skole/TFE4141 Design av digitale system 1/RSA/Git/DD1_project/VHDL-code/ModExp/ModExp.sim/sim_1/behav/xsim\webtalk.jou
+#-----------------------------------------------------------
+source C:/Users/Torgeir -notrace
+couldn't read file "C:/Users/Torgeir": no such file or directory
+INFO: [Common 17-206] Exiting Webtalk at Wed Oct 25 13:18:19 2017...

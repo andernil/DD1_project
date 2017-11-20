@@ -1,0 +1,8 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/git/DD1_project/VHDL-code/ModExp/ModExp.sim/sim_1/synth/func/xsim/ModExp_tb_func_synth.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity MonPro_loop
+INFO: [VRFC 10-307] analyzing entity MonPro_loop_1
+INFO: [VRFC 10-307] analyzing entity MonPro
+INFO: [VRFC 10-307] analyzing entity MonPro_0
+INFO: [VRFC 10-307] analyzing entity ModExp
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/git/DD1_project/VHDL-code/ModExp/ModExp.srcs/sim_1/imports/new/ModExp_tb.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ModExp_tb

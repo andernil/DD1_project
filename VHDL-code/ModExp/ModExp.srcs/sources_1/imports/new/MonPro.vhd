@@ -100,14 +100,18 @@ begin
     a_test(to_integer(unsigned(a_bit(6 downto 0)))) <= '1';
   end process;
   
-  process(n_in,a_test) 
+  process(n_in,a_test,a_bit,clk,reset_n) 
   begin
-    if(unsigned(a_test) > unsigned(n_in)) OR (a_bit > "01111111") then
+--    if (clk'event and clk = '1') then
+    if (reset_n = '1') then
+      MP_done <= '0';
+    elsif(unsigned(a_test(127 downto 0)) > unsigned(n_in) or (unsigned(a_bit) > "01111111")) then
       MP_done <= '1';
     else 
       MP_done <= '0';
     end if;
-  end process;  
+--  end if;
+  end process;
   
   
   loopti_loop: entity work.MonPro_loop
@@ -132,7 +136,6 @@ begin
     end process;
  
   process(clk,a_bit,reset_n) begin
-
     if(clk'event and clk = '1') then
       if(reset_n = '1') then
         a_bit <= (others => '0');

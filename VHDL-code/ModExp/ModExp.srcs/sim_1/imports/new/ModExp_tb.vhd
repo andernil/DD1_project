@@ -38,6 +38,8 @@ end ModExp_tb;
 architecture Behavioral of ModExp_tb is
 constant CLK_PERIOD    : time := 10 ns;
 
+signal test_reg:STD_LOGIC_VECTOR (127 downto 0);
+
 signal    clk  : STD_LOGIC := '1';
 signal reset_n : STD_LOGIC;
 
@@ -103,7 +105,7 @@ M_out   => M_out
   rr_n <= x"0654615e12a8b2ca13f45a4b74fa7de0";
 --102030405060708090123456789
 
-  wait for 3*CLK_PERIOD;
+  wait for 2.5*CLK_PERIOD;
   reset_n <= '0';  
   
   wait for 20*CLK_PERIOD;
@@ -113,6 +115,11 @@ M_out   => M_out
 --  reset_n <= '0';  
 
   wait;
+  end process;
   
+  process(clk, ME_done, M_out) begin
+    if(clk'event and clk = '1' and ME_done = '1') then
+      test_reg <= M_out;
+    end if;
   end process;
 end Behavioral;

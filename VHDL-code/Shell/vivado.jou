@@ -1,0 +1,53 @@
+#-----------------------------------------------------------
+# Vivado v2017.3 (64-bit)
+# SW Build 2018833 on Wed Oct  4 19:58:22 MDT 2017
+# IP Build 2016188 on Wed Oct  4 21:52:56 MDT 2017
+# Start of session at: Sun Nov 12 15:30:49 2017
+# Process ID: 19764
+# Current directory: C:/git/NY_RSA/DD1_project/VHDL-code/Shell
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent20296 C:\git\NY_RSA\DD1_project\VHDL-code\Shell\Shell.xpr
+# Log file: C:/git/NY_RSA/DD1_project/VHDL-code/Shell/vivado.log
+# Journal file: C:/git/NY_RSA/DD1_project/VHDL-code/Shell\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/git/NY_RSA/DD1_project/VHDL-code/Shell/Shell.xpr
+launch_simulation
+open_wave_config C:/git/NY_RSA/DD1_project/VHDL-code/Shell/Shell.srcs/sim_1/imports/Shell/RSACoreTestBench_behav.wcfg
+open_wave_config C:/git/NY_RSA/DD1_project/VHDL-code/Shell/TorgeTest_TB_behav.wcfg
+source RSACoreTestBench.tcl
+run all
+relaunch_sim
+run all
+relaunch_sim
+run all
+relaunch_sim
+relaunch_sim
+relaunch_sim
+run all
+relaunch_sim
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+wait_on_run synth_1
+relaunch_sim
+run all
+relaunch_sim
+run all
+synth_design -rtl -name rtl_1
+relaunch_sim
+run all
+refresh_design
+relaunch_sim
+run all
+refresh_design
+relaunch_sim
+run all
+close_sim

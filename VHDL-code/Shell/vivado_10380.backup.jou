@@ -1,0 +1,21 @@
+#-----------------------------------------------------------
+# Vivado v2017.3 (64-bit)
+# SW Build 2018833 on Wed Oct  4 19:58:22 MDT 2017
+# IP Build 2016188 on Wed Oct  4 21:52:56 MDT 2017
+# Start of session at: Sun Nov 12 01:28:13 2017
+# Process ID: 10380
+# Current directory: C:/git/DD1_project/VHDL-code/Shell
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent1252 C:\git\DD1_project\VHDL-code\Shell\Shell.xpr
+# Log file: C:/git/DD1_project/VHDL-code/Shell/vivado.log
+# Journal file: C:/git/DD1_project/VHDL-code/Shell\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/git/DD1_project/VHDL-code/Shell/Shell.xpr
+launch_simulation
+open_wave_config C:/git/DD1_project/VHDL-code/Shell/Shell.srcs/sim_1/imports/Shell/RSACoreTestBench_behav.wcfg
+open_wave_config C:/git/DD1_project/VHDL-code/Shell/TorgeTest_TB_behav.wcfg
+source RSACoreTestBench.tcl
+run all
+relaunch_sim
+run all
+close_sim

@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="TorgeTest_TB_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="TorgeTest_TB" />
+            <top_module name="compdecl" />
+            <top_module name="rsaparameters" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="26142333333fs"></ZoomStartTime>
+      <ZoomEndTime time="26207333334fs"></ZoomEndTime>
+      <Cursor1Time time="26197733000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="199"></NameColumnWidth>
+      <ValueColumnWidth column_width="295"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="26" />
+   <wvobject fp_name="/TorgeTest_TB/Clk" type="logic">
+      <obj_property name="ElementShortName">Clk</obj_property>
+      <obj_property name="ObjectShortName">Clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TorgeTest_TB/Resetn" type="logic">
+      <obj_property name="ElementShortName">Resetn</obj_property>
+      <obj_property name="ObjectShortName">Resetn</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TorgeTest_TB/InitRsa" type="logic">
+      <obj_property name="ElementShortName">InitRsa</obj_property>
+      <obj_property name="ObjectShortName">InitRsa</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TorgeTest_TB/StartRsa" type="logic">
+      <obj_property name="ElementShortName">StartRsa</obj_property>
+      <obj_property name="ObjectShortName">StartRsa</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TorgeTest_TB/CoreFinished" type="logic">
+      <obj_property name="ElementShortName">CoreFinished</obj_property>
+      <obj_property name="ObjectShortName">CoreFinished</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TorgeTest_TB/DataOut" type="array">
+      <obj_property name="ElementShortName">DataOut[31:0]</obj_property>
+      <obj_property name="ObjectShortName">DataOut[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TorgeTest_TB/R/Data_out_reg" type="array">
+      <obj_property name="ElementShortName">Data_out_reg[127:0]</obj_property>
+      <obj_property name="ObjectShortName">Data_out_reg[127:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TorgeTest_TB/test_reg" type="array">
+      <obj_property name="ElementShortName">test_reg[127:0]</obj_property>
+      <obj_property name="ObjectShortName">test_reg[127:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TorgeTest_TB/R/ModExp/u_out_1" type="array">
+      <obj_property name="ElementShortName">u_out_1[127:0]</obj_property>
+      <obj_property name="ObjectShortName">u_out_1[127:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TorgeTest_TB/R/ModExp/u_reg_1" type="array">
+      <obj_property name="ElementShortName">u_reg_1[127:0]</obj_property>
+      <obj_property name="ObjectShortName">u_reg_1[127:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TorgeTest_TB/R/ModExp/MP_done_1" type="logic">
+      <obj_property name="ElementShortName">MP_done_1</obj_property>
+      <obj_property name="ObjectShortName">MP_done_1</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TorgeTest_TB/R/ModExp/u_out_2" type="array">
+      <obj_property name="ElementShortName">u_out_2[127:0]</obj_property>
+      <obj_property name="ObjectShortName">u_out_2[127:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TorgeTest_TB/R/ModExp/u_reg_2" type="array">
+      <obj_property name="ElementShortName">u_reg_2[127:0]</obj_property>
+      <obj_property name="ObjectShortName">u_reg_2[127:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TorgeTest_TB/R/ModExp/MP_done_first" type="logic">
+      <obj_property name="ElementShortName">MP_done_first</obj_property>
+      <obj_property name="ObjectShortName">MP_done_first</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TorgeTest_TB/M_in" type="array">
+      <obj_property name="ElementShortName">M_in[127:0]</obj_property>
+      <obj_property name="ObjectShortName">M_in[127:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TorgeTest_TB/e_in" type="array">
+      <obj_property name="ElementShortName">e_in[127:0]</obj_property>
+      <obj_property name="ObjectShortName">e_in[127:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TorgeTest_TB/n_in" type="array">
+      <obj_property name="ElementShortName">n_in[127:0]</obj_property>
+      <obj_property name="ObjectShortName">n_in[127:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TorgeTest_TB/r_n" type="array">
+      <obj_property name="ElementShortName">r_n[127:0]</obj_property>
+      <obj_property name="ObjectShortName">r_n[127:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TorgeTest_TB/rr_n" type="array">
+      <obj_property name="ElementShortName">rr_n[127:0]</obj_property>
+      <obj_property name="ObjectShortName">rr_n[127:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TorgeTest_TB/DataIn" type="array">
+      <obj_property name="ElementShortName">DataIn[31:0]</obj_property>
+      <obj_property name="ObjectShortName">DataIn[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TorgeTest_TB/R/Data_in_reg" type="array">
+      <obj_property name="ElementShortName">Data_in_reg[127:0]</obj_property>
+      <obj_property name="ObjectShortName">Data_in_reg[127:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TorgeTest_TB/R/M_in" type="array">
+      <obj_property name="ElementShortName">M_in[127:0]</obj_property>
+      <obj_property name="ObjectShortName">M_in[127:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TorgeTest_TB/R/e_in" type="array">
+      <obj_property name="ElementShortName">e_in[127:0]</obj_property>
+      <obj_property name="ObjectShortName">e_in[127:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TorgeTest_TB/R/n_in" type="array">
+      <obj_property name="ElementShortName">n_in[127:0]</obj_property>
+      <obj_property name="ObjectShortName">n_in[127:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TorgeTest_TB/R/r_n" type="array">
+      <obj_property name="ElementShortName">r_n[127:0]</obj_property>
+      <obj_property name="ObjectShortName">r_n[127:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TorgeTest_TB/R/rr_n" type="array">
+      <obj_property name="ElementShortName">rr_n[127:0]</obj_property>
+      <obj_property name="ObjectShortName">rr_n[127:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+</wave_config>

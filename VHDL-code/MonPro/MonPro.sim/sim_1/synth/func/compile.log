@@ -1,0 +1,5 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Torgeir Leithe/Google Drive/stor-skole/TFE4141 Design av digitale system 1/RSA/MonPro/MonPro/MonPro.sim/sim_1/synth/func/MonPro_tb_func_synth.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity MonPro_loop
+INFO: [VRFC 10-307] analyzing entity MonPro
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Torgeir Leithe/Google Drive/stor-skole/TFE4141 Design av digitale system 1/RSA/MonPro/MonPro/MonPro.srcs/sim_1/new/MonPro_tb.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity MonPro_tb

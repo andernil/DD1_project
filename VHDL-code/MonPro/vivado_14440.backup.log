@@ -1,0 +1,22 @@
+#-----------------------------------------------------------
+# Vivado v2017.2.1 (64-bit)
+# SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
+# IP Build 1948039 on Wed Aug  9 18:19:28 MDT 2017
+# Start of session at: Sun Oct 22 01:53:54 2017
+# Process ID: 14440
+# Current directory: C:/Users/Torgeir Leithe/Google Drive/stor-skole/TFE4141 Design av digitale system 1/RSA/MonPro/MonPro
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent14660 C:\Users\Torgeir Leithe\Google Drive\stor-skole\TFE4141 Design av digitale system 1\RSA\MonPro\MonPro\MonPro.xpr
+# Log file: C:/Users/Torgeir Leithe/Google Drive/stor-skole/TFE4141 Design av digitale system 1/RSA/MonPro/MonPro/vivado.log
+# Journal file: C:/Users/Torgeir Leithe/Google Drive/stor-skole/TFE4141 Design av digitale system 1/RSA/MonPro/MonPro\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {C:/Users/Torgeir Leithe/Google Drive/stor-skole/TFE4141 Design av digitale system 1/RSA/MonPro/MonPro/MonPro.xpr}
+INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter.
+Current project path is 'C:/Users/Torgeir Leithe/Google Drive/stor-skole/TFE4141 Design av digitale system 1/RSA/MonPro/MonPro'
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2017.2/data/ip'.
+exit
+INFO: [Common 17-206] Exiting Vivado at Sun Oct 22 01:56:23 2017...

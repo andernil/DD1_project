@@ -1,0 +1,14 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../Shell.srcs/sources_1/imports/new/MonPro.vhd" \
+"../../../../Shell.srcs/sources_1/imports/new/ModExp.vhd" \
+"../../../../Shell.srcs/sources_1/new/Shell.vhd" \
+"../../../../Shell.srcs/sim_1/imports/RSAExampleTestbench/RSAParameters.vhd" \
+"../../../../Shell.srcs/sim_1/imports/RSA/CompDecl.vhd" \
+"../../../../Shell.srcs/sim_1/new/TorgeTest.vhd" \
+"../../../../Shell.srcs/sim_1/imports/RSA/RSACore_copy.vhd" \
+"../../../../Shell.srcs/sim_1/imports/RSAExampleTestbench/RSACoreTestBench.vhd" \
+"../../../../Shell.srcs/sim_1/imports/RSAExampleTestbench/CompDecl.vhd" \
+
+# Do not sort compile order
+nosort

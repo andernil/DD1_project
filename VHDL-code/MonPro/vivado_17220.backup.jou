@@ -1,0 +1,24 @@
+#-----------------------------------------------------------
+# Vivado v2017.2.1 (64-bit)
+# SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
+# IP Build 1948039 on Wed Aug  9 18:19:28 MDT 2017
+# Start of session at: Sun Oct 22 00:56:01 2017
+# Process ID: 17220
+# Current directory: C:/Users/Torgeir Leithe/Google Drive/stor-skole/TFE4141 Design av digitale system 1/RSA/MonPro/MonPro
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent13304 C:\Users\Torgeir Leithe\Google Drive\stor-skole\TFE4141 Design av digitale system 1\RSA\MonPro\MonPro\MonPro.xpr
+# Log file: C:/Users/Torgeir Leithe/Google Drive/stor-skole/TFE4141 Design av digitale system 1/RSA/MonPro/MonPro/vivado.log
+# Journal file: C:/Users/Torgeir Leithe/Google Drive/stor-skole/TFE4141 Design av digitale system 1/RSA/MonPro/MonPro\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {C:/Users/Torgeir Leithe/Google Drive/stor-skole/TFE4141 Design av digitale system 1/RSA/MonPro/MonPro/MonPro.xpr}
+launch_simulation
+open_wave_config C:/Users/Torgeir
+open_wave_config Leithe/Google
+open_wave_config Drive/stor-skole/TFE4141
+open_wave_config Design
+open_wave_config av
+open_wave_config digitale
+open_wave_config system
+open_wave_config 1/RSA/MonPro/MonPro/MonPro_tb_func_synth.wcfg
+source MonPro_tb.tcl
+close_sim

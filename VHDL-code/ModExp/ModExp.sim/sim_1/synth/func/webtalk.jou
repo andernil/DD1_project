@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Webtalk v2017.2.1 (64-bit)
+# SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
+# IP Build 1948039 on Wed Aug  9 18:19:28 MDT 2017
+# Start of session at: Mon Oct 23 15:51:17 2017
+# Process ID: 3080
+# Current directory: C:/Users/Torgeir Leithe/Google Drive/stor-skole/TFE4141 Design av digitale system 1/RSA/MonPro/ModExp2/ModExp.sim/sim_1/synth/func
+# Command line: wbtcv.exe -mode batch -source C:/Users/Torgeir Leithe/Google Drive/stor-skole/TFE4141 Design av digitale system 1/RSA/MonPro/ModExp2/ModExp.sim/sim_1/synth/func/xsim.dir/ModExp_tb_func_synth/webtalk/xsim_webtalk.tcl -notrace
+# Log file: C:/Users/Torgeir Leithe/Google Drive/stor-skole/TFE4141 Design av digitale system 1/RSA/MonPro/ModExp2/ModExp.sim/sim_1/synth/func/webtalk.log
+# Journal file: C:/Users/Torgeir Leithe/Google Drive/stor-skole/TFE4141 Design av digitale system 1/RSA/MonPro/ModExp2/ModExp.sim/sim_1/synth/func\webtalk.jou
+#-----------------------------------------------------------
+source C:/Users/Torgeir -notrace

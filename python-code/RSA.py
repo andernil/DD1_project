@@ -89,13 +89,21 @@ def generate_keypair(p, q):
     #Public key is (e, n) and private key is (d, n)
     return ((e, n), (d, n))
 
-def MonPro(a_strek, b_strek, n, n_merket, r):
+def MonPro(A, B, n):
 
-    t = a_strek * b_strek
-    m = (t * n_merket) % r
-    u = (t+(m*n))/r
+    a_bin = bin(A)[2:].zfill(len(bin(n)[2:]))
 
-    if u >= n:
+    u = 0
+    for a_bit in a_bin[::-1]:
+        if a_bit == '1':
+            u += B
+
+        if (u % 2) == 1:
+            u += n
+
+        u = u/2
+
+    if u > n:
         return u-n
     return u
 
@@ -106,7 +114,7 @@ def BinExp(message, e, n):
         C = message
         return C
     for k in range (len(ebin)-1, -1, -1):
-        if k == len(ebin)-1:        
+        if k == len(ebin)-1:
             if ebin[k-1] == 1:
                 C = message
             else:
@@ -144,7 +152,7 @@ def BinSplit(n):
     binsend.append(int(binodd,2))
     return binsend
 
-def extended_gcd(a,b):  
+def extended_gcd(a,b):
     out = []
     t = 1; oldt = 0
     r = b; oldr = a
@@ -159,21 +167,21 @@ def ModExp(message, e, n):
 
     r = 2 ** len(bin(n)[2:]) # r = (r mod n) + n
     n_merket = -extended_gcd(r,n)[1]
-    
+
     #NOTE! "r mod n" and "r*r mod n" is given in the exercise
-    M_strek = MonPro(message,(r*r) % n,n,n_merket,r)
+    M_strek = MonPro(message,(r*r) % n,n)
     x_strek = r % n
 
     for i in bin(e)[2:][::-1]:
         if i == '1':
-            x_strek = MonPro(M_strek,x_strek,n,n_merket,r)
-        M_strek = MonPro(M_strek,M_strek,n,n_merket,r)
+            x_strek = MonPro(M_strek,x_strek,n)
+        M_strek = MonPro(M_strek,M_strek,n)
 
-    return MonPro(x_strek,1,n,n_merket,r)
+    return MonPro(x_strek,1,n)
 
 def torge_crypt(pk, M):
-    
-    binret=[]    
+
+    binret=[]
     #Unpack the key into it's components
     e, n = pk
 
@@ -190,8 +198,8 @@ def torge_crypt(pk, M):
         y = (x2 - x1)*q_inv % x2val
         x = x1 + q*y
         return x
-        
-    else:    
+
+    else:
         return ModExp(M, e, n)
 
 
@@ -206,7 +214,7 @@ if __name__ == '__main__':
 #    p = 43
 #    q = 17
 #    message = 19
-    
+
     print "Generating your public/private keypairs now . . ."
     public, private = generate_keypair(p, q)
     print "Your public key is ", public ," and your private key is ", private
@@ -249,7 +257,7 @@ if __name__ == '__main__':
 
 
     endtime = datetime.now()
-	
+
     print "Time:", endtime-starttime
 
     print ""

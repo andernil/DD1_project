@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2017.3 (64-bit)
+# SW Build 2018833 on Wed Oct  4 19:58:22 MDT 2017
+# IP Build 2016188 on Wed Oct  4 21:52:56 MDT 2017
+# Start of session at: Wed Oct 25 16:32:14 2017
+# Process ID: 9816
+# Current directory: C:/git/DD1_project/VHDL-code/MonPro/MonPro.runs/synth_2
+# Command line: vivado.exe -log MonPro.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source MonPro.tcl
+# Log file: C:/git/DD1_project/VHDL-code/MonPro/MonPro.runs/synth_2/MonPro.vds
+# Journal file: C:/git/DD1_project/VHDL-code/MonPro/MonPro.runs/synth_2\vivado.jou
+#-----------------------------------------------------------
+source MonPro.tcl -notrace

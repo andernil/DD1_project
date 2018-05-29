@@ -1,0 +1,176 @@
+#-----------------------------------------------------------
+# Vivado v2017.3 (64-bit)
+# SW Build 2018833 on Wed Oct  4 19:58:22 MDT 2017
+# IP Build 2016188 on Wed Oct  4 21:52:56 MDT 2017
+# Start of session at: Sun Nov 12 01:28:13 2017
+# Process ID: 10380
+# Current directory: C:/git/DD1_project/VHDL-code/Shell
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent1252 C:\git\DD1_project\VHDL-code\Shell\Shell.xpr
+# Log file: C:/git/DD1_project/VHDL-code/Shell/vivado.log
+# Journal file: C:/git/DD1_project/VHDL-code/Shell\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/git/DD1_project/VHDL-code/Shell/Shell.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2017.3/data/ip'.
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/git/DD1_project/VHDL-code/Shell/Shell.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'RSACoreTestBench' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/git/DD1_project/VHDL-code/Shell/Shell.sim/sim_1/behav/xsim/SmallComFileFasit.txt'
+INFO: [SIM-utils-43] Exported 'C:/git/DD1_project/VHDL-code/Shell/Shell.sim/sim_1/behav/xsim/SmallComFile.txt'
+INFO: [SIM-utils-43] Exported 'C:/git/DD1_project/VHDL-code/Shell/Shell.sim/sim_1/behav/xsim/ComFile.txt'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/git/DD1_project/VHDL-code/Shell/Shell.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj RSACoreTestBench_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/git/DD1_project/VHDL-code/Shell/Shell.srcs/sources_1/imports/new/MonPro.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity MonPro_loop
+INFO: [VRFC 10-307] analyzing entity MonPro
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/git/DD1_project/VHDL-code/Shell/Shell.srcs/sources_1/imports/new/ModExp.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ModExp
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/git/DD1_project/VHDL-code/Shell/Shell.srcs/sources_1/new/Shell.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity RSACore
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/git/DD1_project/VHDL-code/Shell/Shell.srcs/sim_1/imports/RSA/RSACore_copy.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity RSACoreTestBenchcopy
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/git/DD1_project/VHDL-code/Shell/Shell.sim/sim_1/behav/xsim'
+Vivado Simulator 2017.3
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2017.3/bin/unwrapped/win64.o/xelab.exe -wto 34ca5ff7945d4538a3f6dbaea213c66c --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot RSACoreTestBench_behav xil_defaultlib.RSACoreTestBench -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package xil_defaultlib.rsaparameters
+Compiling package xil_defaultlib.compdecl
+Compiling package ieee.numeric_std
+Compiling architecture behavioral of entity xil_defaultlib.MonPro_loop [monpro_loop_default]
+Compiling architecture behavioral of entity xil_defaultlib.MonPro [monpro_default]
+Compiling architecture behavioral of entity xil_defaultlib.ModExp [modexp_default]
+Compiling architecture behavioral of entity xil_defaultlib.RSACore [rsacore_default]
+Compiling architecture struct of entity xil_defaultlib.rsacoretestbench
+Built simulation snapshot RSACoreTestBench_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/git/DD1_project/VHDL-code/Shell/Shell.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "RSACoreTestBench_behav -key {Behavioral:sim_1:Functional:RSACoreTestBench} -tclbatch {RSACoreTestBench.tcl} -view {C:/git/DD1_project/VHDL-code/Shell/Shell.srcs/sim_1/imports/Shell/RSACoreTestBench_behav.wcfg} -view {C:/git/DD1_project/VHDL-code/Shell/TorgeTest_TB_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2017.3
+Time resolution is 1 ps
+open_wave_config C:/git/DD1_project/VHDL-code/Shell/Shell.srcs/sim_1/imports/Shell/RSACoreTestBench_behav.wcfg
+WARNING: Simulation object /RSACoreTestBench/R/ModExp/MP_done_1 was not found in the design.
+WARNING: Simulation object /RSACoreTestBench/R/ModExp/MonPro_1/u_int_ut was not found in the design.
+WARNING: Simulation object /RSACoreTestBench/R/ModExp/loop_test was not found in the design.
+open_wave_config C:/git/DD1_project/VHDL-code/Shell/TorgeTest_TB_behav.wcfg
+WARNING: Simulation object /TorgeTest_TB/Clk was not found in the design.
+WARNING: Simulation object /TorgeTest_TB/Resetn was not found in the design.
+WARNING: Simulation object /TorgeTest_TB/InitRsa was not found in the design.
+WARNING: Simulation object /TorgeTest_TB/StartRsa was not found in the design.
+WARNING: Simulation object /TorgeTest_TB/CoreFinished was not found in the design.
+WARNING: Simulation object /TorgeTest_TB/DataOut was not found in the design.
+WARNING: Simulation object /TorgeTest_TB/R/Data_out_reg was not found in the design.
+WARNING: Simulation object /TorgeTest_TB/test_reg was not found in the design.
+WARNING: Simulation object /TorgeTest_TB/R/ModExp/u_out_1 was not found in the design.
+WARNING: Simulation object /TorgeTest_TB/R/ModExp/u_reg_1 was not found in the design.
+WARNING: Simulation object /TorgeTest_TB/R/ModExp/MP_done_1 was not found in the design.
+WARNING: Simulation object /TorgeTest_TB/R/ModExp/u_out_2 was not found in the design.
+WARNING: Simulation object /TorgeTest_TB/R/ModExp/u_reg_2 was not found in the design.
+WARNING: Simulation object /TorgeTest_TB/R/ModExp/MP_done_first was not found in the design.
+WARNING: Simulation object /TorgeTest_TB/M_in was not found in the design.
+WARNING: Simulation object /TorgeTest_TB/e_in was not found in the design.
+WARNING: Simulation object /TorgeTest_TB/n_in was not found in the design.
+WARNING: Simulation object /TorgeTest_TB/r_n was not found in the design.
+WARNING: Simulation object /TorgeTest_TB/rr_n was not found in the design.
+WARNING: Simulation object /TorgeTest_TB/DataIn was not found in the design.
+WARNING: Simulation object /TorgeTest_TB/R/Data_in_reg was not found in the design.
+WARNING: Simulation object /TorgeTest_TB/R/M_in was not found in the design.
+WARNING: Simulation object /TorgeTest_TB/R/e_in was not found in the design.
+WARNING: Simulation object /TorgeTest_TB/R/n_in was not found in the design.
+WARNING: Simulation object /TorgeTest_TB/R/r_n was not found in the design.
+WARNING: Simulation object /TorgeTest_TB/R/rr_n was not found in the design.
+source RSACoreTestBench.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'RSACoreTestBench_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:09 . Memory (MB): peak = 844.914 ; gain = 32.672
+run all
+run: Time (s): cpu = 00:00:25 ; elapsed = 00:00:15 . Memory (MB): peak = 874.789 ; gain = 13.301
+relaunch_sim
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/git/DD1_project/VHDL-code/Shell/Shell.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'RSACoreTestBench' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/git/DD1_project/VHDL-code/Shell/Shell.sim/sim_1/behav/xsim/SmallComFileFasit.txt'
+INFO: [SIM-utils-43] Exported 'C:/git/DD1_project/VHDL-code/Shell/Shell.sim/sim_1/behav/xsim/SmallComFile.txt'
+INFO: [SIM-utils-43] Exported 'C:/git/DD1_project/VHDL-code/Shell/Shell.sim/sim_1/behav/xsim/ComFile.txt'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/git/DD1_project/VHDL-code/Shell/Shell.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj RSACoreTestBench_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/git/DD1_project/VHDL-code/Shell/Shell.srcs/sources_1/imports/new/ModExp.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ModExp
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/git/DD1_project/VHDL-code/Shell/Shell.srcs/sources_1/new/Shell.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity RSACore
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/git/DD1_project/VHDL-code/Shell/Shell.srcs/sim_1/imports/RSA/RSACore_copy.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity RSACoreTestBenchcopy
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/git/DD1_project/VHDL-code/Shell/Shell.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/git/DD1_project/VHDL-code/Shell/Shell.sim/sim_1/behav/xsim'
+Vivado Simulator 2017.3
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2017.3/bin/unwrapped/win64.o/xelab.exe -wto 34ca5ff7945d4538a3f6dbaea213c66c --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot RSACoreTestBench_behav xil_defaultlib.RSACoreTestBench -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package xil_defaultlib.rsaparameters
+Compiling package xil_defaultlib.compdecl
+Compiling package ieee.numeric_std
+Compiling architecture behavioral of entity xil_defaultlib.MonPro_loop [monpro_loop_default]
+Compiling architecture behavioral of entity xil_defaultlib.MonPro [monpro_default]
+Compiling architecture behavioral of entity xil_defaultlib.ModExp [modexp_default]
+Compiling architecture behavioral of entity xil_defaultlib.RSACore [rsacore_default]
+Compiling architecture struct of entity xil_defaultlib.rsacoretestbench
+Built simulation snapshot RSACoreTestBench_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Vivado Simulator 2017.3
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 874.789 ; gain = 0.000
+run all
+Failure: Finished
+Time: 1889020 ns  Iteration: 1  Process: /RSACoreTestBench/CryptoCtrl  File: C:/git/DD1_project/VHDL-code/Shell/Shell.srcs/sim_1/imports/RSAExampleTestbench/RSACoreTestBench.vhd
+$finish called at time : 1889020 ns : File "C:/git/DD1_project/VHDL-code/Shell/Shell.srcs/sim_1/imports/RSAExampleTestbench/RSACoreTestBench.vhd" Line 271
+run: Time (s): cpu = 00:00:11 ; elapsed = 00:00:07 . Memory (MB): peak = 883.672 ; gain = 8.883
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+exit
+INFO: [Common 17-206] Exiting Vivado at Sun Nov 12 15:18:54 2017...
